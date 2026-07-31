@@ -625,10 +625,10 @@
     <h2 class="section-title">Featured Engineering Projects</h2>
 
     <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterProjects('all')">All Projects</button>
-      <button class="filter-btn" onclick="filterProjects('ai')">AI / ML</button>
-      <button class="filter-btn" onclick="filterProjects('web')">Web Development</button>
-      <button class="filter-btn" onclick="filterProjects('java')">Java Desktop</button>
+      <button class="filter-btn active" onclick="filterProjects(event, 'all')">All Projects</button>
+      <button class="filter-btn" onclick="filterProjects(event, 'ai')">AI / ML</button>
+      <button class="filter-btn" onclick="filterProjects(event, 'web')">Web Development</button>
+      <button class="filter-btn" onclick="filterProjects(event, 'java')">Java Desktop</button>
     </div>
 
     <div class="projects-grid">
@@ -709,7 +709,6 @@
         <div>
           <div class="project-header">
             <h3>Sportize</h3>
-            <p style="display:none;"></p>
             <i class="fa-solid fa-trophy" style="color: var(--accent-cyan); font-size: 1.2rem;"></i>
           </div>
           <p>
@@ -729,18 +728,15 @@
       </div>
 
       <!-- Project 5 -->
-    <div class="project-card" data-category="ai">
+      <div class="project-card" data-category="ai">
         <div>
             <div class="project-header">
                 <h3>AI Fitness Coach</h3>
-                <i class="fa-solid fa-dumbbell"
-                   style="color: var(--accent-cyan); font-size:1.2rem;"></i>
+                <i class="fa-solid fa-dumbbell" style="color: var(--accent-cyan); font-size:1.2rem;"></i>
             </div>
-
             <p>
                 Developed an AI-powered Fitness Coach using CrewAI, Gemini, and MCP with a hierarchical multi-agent architecture for evidence-based fitness and nutrition guidance.
             </p>
-
             <div class="tag-container">
                 <span class="tag">Python</span>
                 <span class="tag">CrewAI</span>
@@ -750,22 +746,17 @@
                 <span class="tag">Streamlit</span>
             </div>
         </div>
-
         <div class="project-links">
-            <a href="https://github.com/raghav12344/Ai-Fitness-Coach"
-               target="_blank"
-               class="project-link-btn">
+            <a href="https://github.com/raghav12344/Ai-Fitness-Coach" target="_blank" class="project-link-btn">
                 <i class="fa-brands fa-github"></i>
                 View Code
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
         </div>
-    </div>
-
-</div>
-</section>
+      </div>
     </div>
   </section>
+
   <!-- Education Section -->
   <section id="education">
     <div class="section-tag"><i class="fa-solid fa-user-graduate"></i> Academic</div>
@@ -808,12 +799,12 @@
   </footer>
 
   <script>
-    function filterProjects(category) {
+    function filterProjects(event, category) {
       const cards = document.querySelectorAll('.project-card');
       const buttons = document.querySelectorAll('.filter-btn');
 
       buttons.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
+      event.currentTarget.classList.add('active');
 
       cards.forEach(card => {
         if (category === 'all' || card.dataset.category === category) {
