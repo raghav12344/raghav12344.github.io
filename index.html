@@ -240,6 +240,7 @@
 
     .project-links {
       display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
       margin-top: 1rem;
     }
@@ -249,6 +250,10 @@
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 600;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -357,7 +362,7 @@
         </div>
       </div>
 
-      <!-- Project 2 -->
+      <!-- Project 2 (Medicose - Dual Repos) -->
       <div class="project-card" data-category="web">
         <div>
           <h3>Medicose</h3>
@@ -369,7 +374,8 @@
           </div>
         </div>
         <div class="project-links">
-          <a href="https://github.com/raghav12344/Medicose" target="_blank">View Repository →</a>
+          <a href="https://github.com/raghav12344/medicare-frontend" target="_blank">Frontend Repo →</a>
+          <a href="https://github.com/raghav12344/medicare-server" target="_blank">Backend Repo →</a>
         </div>
       </div>
 
