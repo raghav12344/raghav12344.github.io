@@ -5,24 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raghav Gupta | Software Engineer & AI Developer</title>
   
-  <!-- Google Fonts & FontAwesome -->
+  <!-- Google Fonts: Plus Jakarta Sans for UI, Fira Code for Code snippets -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
-      --bg-dark: #090d16;
-      --card-bg: rgba(17, 24, 39, 0.7);
-      --card-border: rgba(255, 255, 255, 0.08);
-      --card-hover-border: rgba(56, 189, 248, 0.4);
-      --accent-cyan: #38bdf8;
-      --accent-indigo: #818cf8;
+      --bg-dark: #09090b;
+      --card-bg: rgba(24, 24, 27, 0.7);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --card-hover-border: rgba(97, 218, 251, 0.5);
+      --accent-react: #61dafb;
       --accent-purple: #c084fc;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --glow-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+      --text-main: #fafafa;
+      --text-muted: #a1a1aa;
+      --code-bg: #1e1e1e;
+      --glow-gradient: linear-gradient(135deg, #61dafb 0%, #c084fc 100%);
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     * {
@@ -30,7 +34,6 @@
       margin: 0;
       padding: 0;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      scroll-behavior: smooth;
     }
 
     body {
@@ -39,37 +42,41 @@
       line-height: 1.6;
       overflow-x: hidden;
       position: relative;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 24px 24px;
     }
 
-    /* Ambient Background Light Glows */
+    .font-mono {
+      font-family: 'Fira Code', monospace;
+    }
+
     .glow-orb-1 {
       position: absolute;
       top: -100px;
       left: -100px;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+      background: radial-gradient(circle, rgba(97, 218, 251, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
       z-index: -1;
       pointer-events: none;
     }
-
+    
     .glow-orb-2 {
       position: absolute;
       top: 400px;
       right: -150px;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(129, 140, 248, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+      background: radial-gradient(circle, rgba(192, 132, 252, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
       z-index: -1;
       pointer-events: none;
     }
 
-    /* Header & Navbar */
     header {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(9, 13, 22, 0.8);
+      background: rgba(9, 9, 11, 0.8);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--card-border);
@@ -79,27 +86,32 @@
     nav {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1.2rem 2rem;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .logo {
-      font-size: 1.3rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      background: var(--glow-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 1.2rem;
+      font-weight: 700;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
+    
+    .react-icon-spin {
+      color: var(--accent-react);
+      animation: spin 10s linear infinite;
+    }
+
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
       list-style: none;
       align-items: center;
     }
@@ -107,16 +119,36 @@
     .nav-links a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       font-weight: 500;
       transition: all 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: var(--accent-cyan);
+      color: var(--accent-react);
     }
 
-    /* Sections Shared Styles */
+    .cmd-k {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .cmd-k kbd {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-family: inherit;
+      color: var(--text-main);
+    }
+
     section {
       max-width: 1200px;
       margin: 0 auto;
@@ -128,13 +160,15 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.4rem 1rem;
-      background: rgba(56, 189, 248, 0.08);
-      border: 1px solid rgba(56, 189, 248, 0.2);
+      background: rgba(97, 218, 251, 0.08);
+      border: 1px solid rgba(97, 218, 251, 0.2);
       border-radius: 30px;
-      color: var(--accent-cyan);
-      font-size: 0.85rem;
+      color: var(--accent-react);
+      font-size: 0.8rem;
       font-weight: 600;
       margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .section-title {
@@ -144,13 +178,19 @@
       letter-spacing: -0.5px;
     }
 
-    /* Hero Section */
     .hero {
       min-height: 90vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 4rem;
+      padding-top: 8rem;
+    }
+
+    .hero-content {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-top: 8rem;
     }
 
     .status-badge {
@@ -158,12 +198,11 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.4rem 1rem;
-      background: rgba(34, 197, 94, 0.1);
-      border: 1px solid rgba(34, 197, 94, 0.25);
-      border-radius: 30px;
-      color: #4ade80;
-      font-size: 0.85rem;
-      font-weight: 600;
+      background: rgba(97, 218, 251, 0.1);
+      border: 1px solid rgba(97, 218, 251, 0.25);
+      border-radius: 6px;
+      color: var(--accent-react);
+      font-size: 0.8rem;
       margin-bottom: 1.5rem;
       width: fit-content;
     }
@@ -171,20 +210,20 @@
     .pulse-dot {
       width: 8px;
       height: 8px;
-      background-color: #22c55e;
+      background-color: var(--accent-react);
       border-radius: 50%;
-      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+      box-shadow: 0 0 0 0 rgba(97, 218, 251, 0.7);
       animation: pulse 2s infinite;
     }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-      70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(97, 218, 251, 0.7); }
+      70% { box-shadow: 0 0 0 8px rgba(97, 218, 251, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(97, 218, 251, 0); }
     }
 
     .hero h1 {
-      font-size: 4rem;
+      font-size: 3.8rem;
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: 1rem;
@@ -199,11 +238,82 @@
 
     .hero p {
       color: var(--text-muted);
-      font-size: 1.2rem;
-      max-width: 680px;
+      font-size: 1.1rem;
       margin-bottom: 2.5rem;
       font-weight: 400;
     }
+
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px dashed var(--card-border);
+    }
+
+    .stat-item h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .stat-item p {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin-top: 0.2rem;
+    }
+
+    .code-window {
+      background: var(--code-bg);
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .code-header {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.8rem 1rem;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .mac-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .mac-dots div {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    .mac-dots .red { background: #ff5f56; }
+    .mac-dots .yellow { background: #ffbd2e; }
+    .mac-dots .green { background: #27c93f; }
+
+    .file-name {
+      margin: 0 auto;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .code-content {
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #e2e8f0;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .syntax-keyword { color: #ff7b72; }
+    .syntax-func { color: #d2a8ff; }
+    .syntax-string { color: #a5d6ff; }
+    .syntax-tag { color: #7ee787; }
 
     .btn-group {
       display: flex;
@@ -217,7 +327,7 @@
       align-items: center;
       gap: 0.6rem;
       padding: 0.85rem 1.8rem;
-      border-radius: 12px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
       font-size: 0.95rem;
@@ -226,52 +336,26 @@
     }
 
     .btn-primary {
-      background: var(--glow-gradient);
-      color: #0f172a;
-      box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.3);
+      background: var(--text-main);
+      color: var(--bg-dark);
     }
 
     .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 30px -5px rgba(56, 189, 248, 0.5);
+      background: var(--accent-react);
+      transform: translateY(-2px);
     }
 
     .btn-outline {
-      background: var(--card-bg);
+      background: transparent;
       border: 1px solid var(--card-border);
       color: var(--text-main);
-      backdrop-filter: blur(10px);
     }
 
     .btn-outline:hover {
-      border-color: var(--accent-cyan);
-      color: var(--accent-cyan);
-      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--text-muted);
     }
 
-    /* Stats Quick Highlights */
-    .stats-bar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 4rem;
-      padding-top: 3rem;
-      border-top: 1px solid var(--card-border);
-    }
-
-    .stat-item h3 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--text-main);
-    }
-
-    .stat-item p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-top: 0.2rem;
-    }
-
-    /* Skills Cards */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -281,7 +365,7 @@
     .skill-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 16px;
+      border-radius: 12px;
       padding: 2rem;
       backdrop-filter: blur(12px);
       transition: all 0.3s ease;
@@ -289,19 +373,17 @@
 
     .skill-card:hover {
       border-color: var(--card-hover-border);
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
     }
 
     .skill-icon {
       width: 48px;
       height: 48px;
-      border-radius: 12px;
-      background: rgba(56, 189, 248, 0.1);
+      border-radius: 8px;
+      background: rgba(97, 218, 251, 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--accent-cyan);
+      color: var(--accent-react);
       font-size: 1.4rem;
       margin-bottom: 1.2rem;
     }
@@ -318,22 +400,21 @@
     }
 
     .tag {
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(255, 255, 255, 0.05);
       color: var(--text-muted);
-      padding: 0.35rem 0.85rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       transition: all 0.2s ease;
     }
 
     .skill-card:hover .tag {
-      color: var(--text-main);
-      border-color: rgba(56, 189, 248, 0.2);
+      color: var(--accent-react);
+      border-color: rgba(97, 218, 251, 0.3);
+      background: rgba(97, 218, 251, 0.05);
     }
 
-    /* Projects Filtering & Cards */
     .filter-bar {
       display: flex;
       gap: 0.8rem;
@@ -342,21 +423,20 @@
     }
 
     .filter-btn {
-      background: var(--card-bg);
+      background: transparent;
       border: 1px solid var(--card-border);
       color: var(--text-muted);
-      padding: 0.6rem 1.2rem;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
       cursor: pointer;
       transition: all 0.2s ease;
     }
 
     .filter-btn.active, .filter-btn:hover {
-      background: var(--glow-gradient);
-      color: #0f172a;
-      border-color: transparent;
+      background: var(--text-main);
+      color: var(--bg-dark);
+      border-color: var(--text-main);
     }
 
     .projects-grid {
@@ -368,19 +448,17 @@
     .project-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 20px;
+      border-radius: 12px;
       padding: 2rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      backdrop-filter: blur(12px);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.3s ease;
     }
 
     .project-card:hover {
       border-color: var(--card-hover-border);
-      transform: translateY(-6px);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+      transform: translateY(-4px);
     }
 
     .project-header {
@@ -412,22 +490,20 @@
     }
 
     .project-link-btn {
-      color: var(--accent-cyan);
+      color: var(--text-main);
       text-decoration: none;
       font-size: 0.88rem;
-      font-weight: 600;
+      font-weight: 500;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      transition: opacity 0.2s ease;
+      transition: color 0.2s ease;
     }
 
     .project-link-btn:hover {
-      opacity: 0.8;
-      text-decoration: underline;
+      color: var(--accent-react);
     }
 
-    /* Education & Experience Timeline */
     .timeline {
       position: relative;
       padding-left: 2rem;
@@ -441,55 +517,35 @@
 
     .timeline-dot {
       position: absolute;
-      left: -2.6rem;
-      top: 0.2rem;
-      width: 16px;
-      height: 16px;
+      left: -2.4rem;
+      top: 0;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
-      background: var(--accent-cyan);
-      box-shadow: 0 0 12px var(--accent-cyan);
+      background: var(--bg-dark);
+      border: 2px solid var(--accent-react);
     }
 
     .timeline-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 16px;
+      border-radius: 12px;
       padding: 1.8rem;
     }
 
-    .timeline-card h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-
-    .timeline-card .sub {
-      color: var(--accent-cyan);
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Contact Card */
     .contact-card {
-      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 3.5rem 2.5rem;
+      background: rgba(24, 24, 27, 0.4);
+      border: 1px dashed var(--text-muted);
+      border-radius: 16px;
+      padding: 4rem 2.5rem;
       text-align: center;
       max-width: 800px;
       margin: 0 auto;
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
     }
 
-    .contact-card h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact-card p {
-      color: var(--text-muted);
-      max-width: 500px;
-      margin: 0 auto 2rem;
+    .contact-card:hover {
+      border-color: var(--accent-react);
+      background: rgba(24, 24, 27, 0.8);
     }
 
     footer {
@@ -501,11 +557,26 @@
       margin-top: 4rem;
     }
 
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.8rem; }
-      .nav-links { display: none; }
-      .hero p { font-size: 1rem; }
-      .stats-bar { grid-template-columns: 1fr 1fr; }
+    @media (max-width: 968px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 6rem;
+      }
+      .hero-content {
+        align-items: center;
+      }
+      .hero p {
+        max-width: 600px;
+      }
+      .btn-group {
+        justify-content: center;
+      }
+      .code-window {
+        text-align: left;
+      }
+      .nav-links, .cmd-k { display: none; }
+      .stats-bar { justify-content: center; text-align: center; }
     }
   </style>
 </head>
@@ -518,69 +589,104 @@
   <header>
     <nav>
       <div class="logo">
-        <i class="fa-solid fa-code"></i> Raghav Gupta
+        <i class="fa-brands fa-react react-icon-spin"></i> Raghav Gupta
       </div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul class="nav-links font-mono">
+        <li><a href="#about">{"&lt;About /&gt;"}</a></li>
+        <li><a href="#skills">{"&lt;Skills /&gt;"}</a></li>
+        <li><a href="#projects">{"&lt;Projects /&gt;"}</a></li>
+        <li><a href="#education">{"&lt;Education /&gt;"}</a></li>
+        <li><a href="#contact">{"&lt;Contact /&gt;"}</a></li>
       </ul>
+      <div class="cmd-k font-mono">
+        Search <kbd>⌘</kbd><kbd>K</kbd>
+      </div>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section id="about" class="hero">
-    <div class="status-badge">
-      <div class="pulse-dot"></div> Open for Full-Time & Internship Roles
-    </div>
-    <h1>Building <span>Intelligent AI</span> & Scalable Web Systems</h1>
-    <p>
-      Computer Science & Engineering student at MNNIT Allahabad. Specialized in designing high-performance RAG pipelines, modern full-stack web applications, and optimized database architectures.
-    </p>
-    <div class="btn-group">
-      <a href="#projects" class="btn btn-primary">
-        Explore Projects <i class="fa-solid fa-arrow-right"></i>
-      </a>
-      <a href="https://github.com/raghav12344" target="_blank" class="btn btn-outline">
-        <i class="fa-brands fa-github"></i> GitHub
-      </a>
-      <a href="https://linkedin.com/in/raghav-gupta1233" target="_blank" class="btn btn-outline">
-        <i class="fa-brands fa-linkedin"></i> LinkedIn
-      </a>
+    <div class="hero-content">
+      <div class="status-badge font-mono">
+        <div class="pulse-dot"></div> npm run start --open-to-work
+      </div>
+      <h1>Building <span>Intelligent AI</span> & Scalable Web Systems</h1>
+      <p>
+        Computer Science & Engineering student at MNNIT Allahabad. Specialized in designing high-performance RAG pipelines, modern full-stack web applications, and optimized database architectures.
+      </p>
+      
+      <div class="btn-group">
+        <a href="#projects" class="btn btn-primary">
+          Explore Projects <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="https://github.com/raghav12344" target="_blank" class="btn btn-outline">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/raghav-gupta1233" target="_blank" class="btn btn-outline">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <h3>MNNIT</h3>
+          <p class="font-mono">CSE Undergrad</p>
+        </div>
+        <div class="stat-item">
+          <h3>4+</h3>
+          <p class="font-mono">Production Projects</p>
+        </div>
+        <div class="stat-item">
+          <h3>90%</h3>
+          <p class="font-mono">Search Speedup</p>
+        </div>
+        <div class="stat-item">
+          <h3>AI / RAG</h3>
+          <p class="font-mono">LLM Integrations</p>
+        </div>
+      </div>
     </div>
 
-    <div class="stats-bar">
-      <div class="stat-item">
-        <h3>MNNIT</h3>
-        <p>CSE Undergraduate</p>
+    <!-- Code Editor Graphic -->
+    <div class="code-window">
+      <div class="code-header">
+        <div class="mac-dots">
+          <div class="red"></div>
+          <div class="yellow"></div>
+          <div class="green"></div>
+        </div>
+        <div class="file-name font-mono">Developer.tsx</div>
       </div>
-      <div class="stat-item">
-        <h3>4+</h3>
-        <p>Production Projects</p>
-      </div>
-      <div class="stat-item">
-        <h3>90%</h3>
-        <p>Search Speedup (EstateSync)</p>
-      </div>
-      <div class="stat-item">
-        <h3>RAG & AI</h3>
-        <p>LLM Integrations</p>
-      </div>
+      <div class="code-content font-mono"><span class="syntax-keyword">import</span> { useState } <span class="syntax-keyword">from</span> <span class="syntax-string">'react'</span>;
+<span class="syntax-keyword">import</span> { MNNIT_Student } <span class="syntax-keyword">from</span> <span class="syntax-string">'@university/mnnit'</span>;
+
+<span class="syntax-keyword">const</span> <span class="syntax-func">RaghavGupta</span> = () => {
+  <span class="syntax-keyword">const</span> [status] = <span class="syntax-func">useState</span>(<span class="syntax-string">'Open for Roles'</span>);
+  <span class="syntax-keyword">const</span> core = [<span class="syntax-string">'AI/RAG'</span>, <span class="syntax-string">'Python'</span>, <span class="syntax-string">'React'</span>, <span class="syntax-string">'Java'</span>];
+
+  <span class="syntax-keyword">return</span> (
+    &lt;<span class="syntax-tag">DeveloperProfile</span>
+      <span class="syntax-func">role</span>=<span class="syntax-string">"Software Engineer & AI Dev"</span>
+      <span class="syntax-func">projects</span>={5}
+      <span class="syntax-func">availability</span>={status}
+    /&gt;
+  );
+};
+
+<span class="syntax-keyword">export default</span> RaghavGupta;</div>
     </div>
   </section>
 
   <!-- Skills Section -->
   <section id="skills">
-    <div class="section-tag"><i class="fa-solid fa-layer-group"></i> Expertise</div>
-    <h2 class="section-title">Technical Skillset</h2>
+    <div class="section-tag font-mono">dependencies.json</div>
+    <h2 class="section-title">Technical Arsenal</h2>
     
     <div class="skills-grid">
       <div class="skill-card">
         <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
         <h3>AI & Data Engineering</h3>
-        <div class="tag-container">
+        <div class="tag-container font-mono">
           <span class="tag">RAG Pipelines</span>
           <span class="tag">LangChain</span>
           <span class="tag">Gemini API</span>
@@ -594,7 +700,7 @@
       <div class="skill-card">
         <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
         <h3>Languages</h3>
-        <div class="tag-container">
+        <div class="tag-container font-mono">
           <span class="tag">Python</span>
           <span class="tag">Java (JDK 22)</span>
           <span class="tag">C++</span>
@@ -605,7 +711,7 @@
       <div class="skill-card">
         <div class="skill-icon"><i class="fa-solid fa-globe"></i></div>
         <h3>Web & Databases</h3>
-        <div class="tag-container">
+        <div class="tag-container font-mono">
           <span class="tag">JavaScript</span>
           <span class="tag">HTML/CSS</span>
           <span class="tag">React.js</span>
@@ -621,57 +727,56 @@
 
   <!-- Projects Section -->
   <section id="projects">
-    <div class="section-tag"><i class="fa-solid fa-diagram-project"></i> Portfolio</div>
-    <h2 class="section-title">Featured Engineering Projects</h2>
+    <div class="section-tag font-mono">components/portfolio</div>
+    <h2 class="section-title">Featured Projects</h2>
 
-    <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterProjects(event, 'all')">All Projects</button>
-      <button class="filter-btn" onclick="filterProjects(event, 'ai')">AI / ML</button>
-      <button class="filter-btn" onclick="filterProjects(event, 'web')">Web Development</button>
-      <button class="filter-btn" onclick="filterProjects(event, 'java')">Java Desktop</button>
+    <div class="filter-bar font-mono">
+      <button class="filter-btn active" onclick="filterProjects(event, 'all')">all</button>
+      <button class="filter-btn" onclick="filterProjects(event, 'ai')">ai-ml</button>
+      <button class="filter-btn" onclick="filterProjects(event, 'web')">web-dev</button>
+      <button class="filter-btn" onclick="filterProjects(event, 'java')">java-desktop</button>
     </div>
 
     <div class="projects-grid">
       
-      <!-- Project 1 -->
-            <div class="project-card" data-category="ai">
+      <!-- AI Fitness Coach -->
+      <div class="project-card" data-category="ai">
         <div>
-            <div class="project-header">
-                <h3>AI Fitness Coach</h3>
-                <i class="fa-solid fa-dumbbell" style="color: var(--accent-cyan); font-size:1.2rem;"></i>
-            </div>
-            <p>
-                Developed an AI-powered Fitness Coach using CrewAI, Gemini, and MCP with a hierarchical multi-agent architecture for evidence-based fitness and nutrition guidance.
-            </p>
-            <div class="tag-container">
-                <span class="tag">Python</span>
-                <span class="tag">CrewAI</span>
-                <span class="tag">Gemini</span>
-                <span class="tag">MCP</span>
-                <span class="tag">Tavily</span>
-                <span class="tag">Streamlit</span>
-                <span class="tag">Agentic AI</span>
-            </div>
+          <div class="project-header">
+            <h3>AI Fitness Coach</h3>
+            <i class="fa-solid fa-dumbbell" style="color: var(--accent-react);"></i>
+          </div>
+          <p>
+            Developed an AI-powered Fitness Coach using CrewAI, Gemini, and MCP with a hierarchical multi-agent architecture for evidence-based fitness and nutrition guidance.
+          </p>
+          <div class="tag-container font-mono">
+            <span class="tag">Python</span>
+            <span class="tag">CrewAI</span>
+            <span class="tag">Gemini</span>
+            <span class="tag">MCP</span>
+            <span class="tag">Tavily</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Agentic AI</span>
+          </div>
         </div>
-        <div class="project-links">
-            <a href="https://github.com/raghav12344/Ai-Fitness-Coach" target="_blank" class="project-link-btn">
-                <i class="fa-brands fa-github"></i>
-                View Code
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
+        <div class="project-links font-mono">
+          <a href="https://github.com/raghav12344/Ai-Fitness-Coach" target="_blank" class="project-link-btn">
+            <i class="fa-brands fa-github"></i> source-code
+          </a>
         </div>
       </div>
-       <!-- Project 2 -->
+
+      <!-- SQL Learning Assistant -->
       <div class="project-card" data-category="ai">
         <div>
           <div class="project-header">
             <h3>SQL Learning Assistant</h3>
-            <i class="fa-solid fa-robot" style="color: var(--accent-cyan); font-size: 1.2rem;"></i>
+            <i class="fa-solid fa-robot" style="color: var(--accent-react);"></i>
           </div>
           <p>
             RAG-powered conversational AI assistant that analyzes official SQL documentation to generate context-aware query explanations with minimal hallucinations.
           </p>
-          <div class="tag-container">
+          <div class="tag-container font-mono">
             <span class="tag">Python</span>
             <span class="tag">LangChain</span>
             <span class="tag">RAG</span>
@@ -679,50 +784,48 @@
             <span class="tag">Gemini</span>
           </div>
         </div>
-        <div class="project-links">
+        <div class="project-links font-mono">
           <a href="https://github.com/raghav12344/sqlLearningAssistant" target="_blank" class="project-link-btn">
-            <i class="fa-brands fa-github"></i> View Code <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <i class="fa-brands fa-github"></i> source-code
           </a>
         </div>
       </div>
 
-      <!-- Project 3 (Medicose Dual Repos) -->
+      <!-- EstateSync (Java Project) -->
       <div class="project-card" data-category="java">
         <div>
           <div class="project-header">
             <h3>EstateSync</h3>
-            <i class="fa-solid fa-city" style="color: var(--accent-cyan); font-size: 1.2rem;"></i>
+            <i class="fa-solid fa-city" style="color: var(--accent-react);"></i>
           </div>
           <p>
             Desktop real estate software engineered with custom JDBC queries and MySQL BLOB handling, accelerating property discovery speed by up to 90%.
           </p>
-          <div class="tag-container">
+          <div class="tag-container font-mono">
             <span class="tag">Java 22</span>
             <span class="tag">JavaFX</span>
             <span class="tag">MySQL</span>
             <span class="tag">JDBC</span>
           </div>
         </div>
-        <div class="project-links">
+        <div class="project-links font-mono">
           <a href="https://github.com/raghav12344/EstateSync" target="_blank" class="project-link-btn">
-            <i class="fa-brands fa-github"></i> View Code <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <i class="fa-brands fa-github"></i> source-code
           </a>
         </div>
       </div>
-      
-     
-      <!-- Project 4 -->
-      
-       <div class="project-card" data-category="web">
+
+      <!-- Medicose -->
+      <div class="project-card" data-category="web">
         <div>
           <div class="project-header">
             <h3>Medicose</h3>
-            <i class="fa-solid fa-notes-medical" style="color: var(--accent-cyan); font-size: 1.2rem;"></i>
+            <i class="fa-solid fa-notes-medical" style="color: var(--accent-react);"></i>
           </div>
           <p>
             Full-stack medical supply ecosystem connecting suppliers with healthcare entities, featuring Gemini AI for smart inventory discovery.
           </p>
-          <div class="tag-container">
+          <div class="tag-container font-mono">
             <span class="tag">MERN Stack</span>
             <span class="tag">Gemini API</span>
             <span class="tag">Tailwind CSS</span>
@@ -731,27 +834,27 @@
             <span class="tag">MongoDB Atlas</span>
           </div>
         </div>
-        <div class="project-links">
+        <div class="project-links font-mono">
           <a href="https://github.com/raghav12344/medicare-frontend" target="_blank" class="project-link-btn">
-            <i class="fa-brands fa-github"></i> Frontend Repo
+            <i class="fa-brands fa-github"></i> frontend
           </a>
           <a href="https://github.com/raghav12344/medicare-server" target="_blank" class="project-link-btn">
-            <i class="fa-brands fa-github"></i> Backend Repo
+            <i class="fa-brands fa-github"></i> backend
           </a>
         </div>
       </div>
 
-      <!-- Project 5 -->
+      <!-- Sportize -->
       <div class="project-card" data-category="web">
         <div>
           <div class="project-header">
             <h3>Sportize</h3>
-            <i class="fa-solid fa-trophy" style="color: var(--accent-cyan); font-size: 1.2rem;"></i>
+            <i class="fa-solid fa-trophy" style="color: var(--accent-react);"></i>
           </div>
           <p>
             Community sports scheduling app leveraging custom RESTful APIs to reduce match search and booking latency by 60%.
           </p>
-          <div class="tag-container">
+          <div class="tag-container font-mono">
             <span class="tag">HTML/CSS</span>
             <span class="tag">BootStrap</span>
             <span class="tag">JavaScript</span>
@@ -759,25 +862,21 @@
             <span class="tag">AngularJS</span>
             <span class="tag">MySQL</span>
             <span class="tag">Cloudinary</span>
-            <span class="tag">Avien Cloud</span>
-            
           </div>
         </div>
-        <div class="project-links">
+        <div class="project-links font-mono">
           <a href="https://github.com/raghav12344/project" target="_blank" class="project-link-btn">
-            <i class="fa-brands fa-github"></i> View Code <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <i class="fa-brands fa-github"></i> source-code
           </a>
         </div>
       </div>
-
-     
 
     </div>
   </section>
 
   <!-- Education Section -->
   <section id="education">
-    <div class="section-tag"><i class="fa-solid fa-user-graduate"></i> Academic</div>
+    <div class="section-tag font-mono">history.log</div>
     <h2 class="section-title">Education</h2>
 
     <div class="timeline">
@@ -785,7 +884,7 @@
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <h3>Motilal Nehru National Institute of Technology (MNNIT) Allahabad</h3>
-          <div class="sub">B.Tech in Computer Science and Engineering</div>
+          <div style="color: var(--accent-react); font-family: 'Fira Code', monospace; font-size: 0.85rem; margin-bottom: 0.8rem;">B.Tech | Computer Science and Engineering</div>
           <p style="color: var(--text-muted); font-size: 0.95rem;">
             Focusing on Data Structures & Algorithms, Database Management Systems, Computer Networks, Machine Learning, and Software Engineering.
           </p>
@@ -797,23 +896,23 @@
   <!-- Contact Section -->
   <section id="contact">
     <div class="contact-card">
-      <h2>Let's Build Something Together</h2>
-      <p>
+      <h2 style="margin-bottom: 1rem;">Let's Build Something Together</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">
         I'm actively looking for opportunities in Software Engineering, AI/ML Development, and Full-Stack Roles.
       </p>
-      <div class="btn-group" style="justify-content: center;">
+      <div class="btn-group font-mono" style="justify-content: center;">
         <a href="mailto:graghav1233@gmail.com" class="btn btn-primary">
-          <i class="fa-solid fa-envelope"></i> Send Email
+          npx contact --email
         </a>
         <a href="https://linkedin.com/in/raghav-gupta1233" target="_blank" class="btn btn-outline">
-          <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+          <i class="fa-brands fa-linkedin"></i> linkedin
         </a>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2026 Raghav Gupta. Designed with precision.</p>
+  <footer class="font-mono">
+    <p>console.log("© 2026 Raghav Gupta. All rights reserved.");</p>
   </footer>
 
   <script>
