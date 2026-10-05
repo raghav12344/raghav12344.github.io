@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
     name="description"
-    content="Raghav Gupta — Computer Science student at MNNIT Allahabad specializing in Software Engineering, Machine Learning, AI, RAG systems, and Full-Stack Development."
+    content="Raghav Gupta — B.Tech CSE at MNNIT Allahabad (JEE Main 99.83%ile, JEE Advanced AIR 7406). Software Engineer & AI/ML Developer specializing in Distributed Systems, Multi-Agent MCP & RAG Pipelines, LightGBM/Deep Learning, and Full-Stack Engineering."
   >
-
   <meta
     name="keywords"
-    content="Raghav Gupta, Software Engineer, MNNIT Allahabad, Machine Learning, AI, RAG, Full Stack Developer, Python, Java, React"
+    content="Raghav Gupta, MNNIT Allahabad, Software Engineer, AI ML Engineer, TrustPay, Distributed Systems, FastAPI, LightGBM, RabbitMQ, Redis, LangChain, CrewAI, Model Context Protocol, React, Node.js, JavaFX, C++, LeetCode"
   >
-
   <meta name="author" content="Raghav Gupta">
-
-  <meta property="og:title" content="Raghav Gupta | Software Engineer & AI Developer">
+  <meta property="og:title" content="Raghav Gupta — Software & AI Systems Engineer | MNNIT Allahabad">
   <meta
     property="og:description"
-    content="Software Engineering, Machine Learning, Generative AI and Full-Stack Development."
+    content="B.Tech CSE @ MNNIT Allahabad (JEE Main 99.83%ile, AIR 7406) · Distributed Microservices, Grounded RAG & Multi-Agent MCP Workflows, Calibrated ML, and Full-Stack Systems."
   >
   <meta property="og:type" content="website">
 
-  <title>Raghav Gupta | Software Engineer & AI Developer</title>
+  <title>Raghav Gupta — Software & AI Systems Engineer | MNNIT Allahabad</title>
 
   <link
     rel="icon"
@@ -32,65 +28,129 @@
     href="ChatGPT Image Aug 3, 2026, 01_01_02 AM.png"
   >
 
-  <!-- Fonts -->
+  <!-- Fonts: Plus Jakarta Sans + Inter + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
     rel="stylesheet"
   >
 
-  <!-- Font Awesome -->
+  <!-- Font Awesome 6 -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   >
 
   <style>
+    /* ==========================================================================
+       1. DESIGN TOKENS — HYBRID DAYLIGHT (DEFAULT) & CARBON DARK THEMES
+    ========================================================================== */
+    :root,
+    [data-theme="light"] {
+      --bg-base: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-elevated: #f1f5f9;
+      --bg-glass: rgba(255, 255, 255, 0.88);
+      --bg-subtle: rgba(15, 23, 42, 0.04);
+      --bg-code: #0b0f17;
 
-    /* =========================================================
-       ROOT
-    ========================================================= */
+      --border-subtle: rgba(15, 23, 42, 0.07);
+      --border-default: rgba(15, 23, 42, 0.11);
+      --border-strong: rgba(15, 23, 42, 0.22);
+      --border-accent: rgba(37, 99, 235, 0.42);
 
-    :root {
-      --bg: #07070a;
-      --bg-secondary: #0d0d12;
-      --card: rgba(20, 20, 27, 0.72);
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
 
-      --border: rgba(255,255,255,0.09);
-      --border-hover: rgba(97,218,251,0.45);
+      --accent-primary: #2563eb;
+      --accent-secondary: #1d4ed8;
+      --accent-indigo: #4f46e5;
+      --accent-cyan: #0284c7;
+      --accent-emerald: #059669;
+      --accent-amber: #d97706;
+      --accent-rose: #e11d48;
 
-      --text: #f7f7f8;
-      --muted: #a1a1aa;
-      --muted-light: #c4c4cc;
+      --accent-tint: rgba(37, 99, 235, 0.075);
+      --emerald-tint: rgba(5, 150, 105, 0.085);
+      --amber-tint: rgba(217, 119, 6, 0.09);
+      --rose-tint: rgba(225, 29, 72, 0.085);
 
-      --cyan: #61dafb;
-      --purple: #c084fc;
-      --green: #7ee787;
+      --btn-primary-bg: #0f172a;
+      --btn-primary-fg: #ffffff;
+      --btn-primary-hover: #1e293b;
 
-      --gradient:
-        linear-gradient(
-          135deg,
-          #61dafb 0%,
-          #c084fc 100%
-        );
+      --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.04);
+      --shadow-hover: 0 18px 36px -8px rgba(15, 23, 42, 0.11), 0 0 0 1px rgba(37, 99, 235, 0.28);
+      --shadow-modal: 0 28px 65px -12px rgba(15, 23, 42, 0.24);
 
-      --font:
-        'Plus Jakarta Sans',
-        sans-serif;
-
-      --mono:
-        'Fira Code',
-        monospace;
+      --aurora-1: rgba(37, 99, 235, 0.065);
+      --aurora-2: rgba(79, 70, 229, 0.045);
+      --grid-line: rgba(15, 23, 42, 0.032);
+      --specular-line: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.22), transparent);
     }
 
+    [data-theme="dark"] {
+      --bg-base: #06080d;
+      --bg-surface: #0b0f17;
+      --bg-elevated: #101622;
+      --bg-glass: rgba(13, 18, 28, 0.78);
+      --bg-subtle: rgba(255, 255, 255, 0.03);
+      --bg-code: #080b11;
 
-    /* =========================================================
-       RESET
-    ========================================================= */
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --border-default: rgba(255, 255, 255, 0.09);
+      --border-strong: rgba(255, 255, 255, 0.18);
+      --border-accent: rgba(59, 130, 246, 0.45);
 
-    * {
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+
+      --accent-primary: #3b82f6;
+      --accent-secondary: #60a5fa;
+      --accent-indigo: #6366f1;
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+
+      --accent-tint: rgba(59, 130, 246, 0.1);
+      --emerald-tint: rgba(16, 185, 129, 0.1);
+      --amber-tint: rgba(245, 158, 11, 0.1);
+      --rose-tint: rgba(244, 63, 94, 0.1);
+
+      --btn-primary-bg: #f8fafc;
+      --btn-primary-fg: #06080d;
+      --btn-primary-hover: #e2e8f0;
+
+      --shadow-card: 0 4px 24px -4px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      --shadow-hover: 0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(59, 130, 246, 0.3);
+      --shadow-modal: 0 28px 70px -12px rgba(0, 0, 0, 0.85);
+
+      --aurora-1: rgba(59, 130, 246, 0.11);
+      --aurora-2: rgba(99, 102, 241, 0.08);
+      --grid-line: rgba(255, 255, 255, 0.022);
+      --specular-line: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.16), transparent);
+    }
+
+    :root {
+      --font-display: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --radius-xs: 6px;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 22px;
+    }
+
+    /* ==========================================================================
+       2. RESET, AMBIENT ARCHITECTURAL CANVAS & UTILITIES
+    ========================================================================== */
+    *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -98,2829 +158,3268 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+      scroll-padding-top: 88px;
     }
 
     body {
-      background:
-        radial-gradient(
-          circle at 10% 10%,
-          rgba(97,218,251,0.06),
-          transparent 30%
-        ),
-        radial-gradient(
-          circle at 90% 30%,
-          rgba(192,132,252,0.06),
-          transparent 30%
-        ),
-        var(--bg);
-
-      color: var(--text);
-      font-family: var(--font);
-      line-height: 1.6;
-
+      background-color: var(--bg-base);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.65;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.25s ease, color 0.25s ease;
     }
 
-    body::before {
-      content: "";
-
+    /* Subtle Precision Engineering Grid & Top Radial Light */
+    .ambient-canvas {
       position: fixed;
       inset: 0;
-
       pointer-events: none;
-
-      opacity: 0.25;
-
+      z-index: -1;
       background-image:
-        radial-gradient(
-          rgba(255,255,255,0.15) 1px,
-          transparent 1px
-        );
-
-      background-size: 28px 28px;
-
-      mask-image:
-        linear-gradient(
-          to bottom,
-          black,
-          transparent 90%
-        );
-
-      z-index: -2;
+        radial-gradient(ellipse 80% 50% at 50% -15%, var(--aurora-1), transparent 70%),
+        radial-gradient(ellipse 50% 40% at 85% 15%, var(--aurora-2), transparent 65%),
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+      mask-image: radial-gradient(ellipse 100% 85% at 50% 25%, #000 55%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 100% 85% at 50% 25%, #000 55%, transparent 100%);
     }
 
     a {
       color: inherit;
+      text-decoration: none;
     }
 
     button {
       font-family: inherit;
+      cursor: pointer;
+      background: none;
+      border: none;
     }
 
+    ::selection {
+      background: var(--accent-primary);
+      color: #ffffff;
+    }
 
-    /* =========================================================
-       UTILITIES
-    ========================================================= */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-cyan));
+      z-index: 10005;
+      transition: width 0.08s linear;
+    }
 
     .container {
-      width: min(1180px, calc(100% - 40px));
-      margin: auto;
+      width: min(1240px, calc(100% - 48px));
+      margin: 0 auto;
     }
 
     .mono {
-      font-family: var(--mono);
+      font-family: var(--font-mono);
     }
 
-    .gradient-text {
-      background: var(--gradient);
-
-      -webkit-background-clip: text;
-      background-clip: text;
-
-      -webkit-text-fill-color: transparent;
+    /* Specular Surface Card */
+    .surface-card {
+      position: relative;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.22s ease,
+                  box-shadow 0.22s ease;
     }
 
+    .surface-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: var(--specular-line);
+      pointer-events: none;
+      z-index: 2;
+    }
 
-    /* =========================================================
-       NAVBAR
-    ========================================================= */
+    .surface-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        520px circle at var(--mouse-x, -500px) var(--mouse-y, -500px),
+        rgba(59, 130, 246, 0.055),
+        transparent 45%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
 
+    .surface-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .surface-card:hover {
+      border-color: var(--border-strong);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* ==========================================================================
+       3. NAVIGATION HEADER
+    ========================================================================== */
     header {
       position: fixed;
-
       top: 0;
       left: 0;
-
-      width: 100%;
-
-      z-index: 999;
-
-      background:
-        rgba(7,7,10,0.78);
-
+      right: 0;
+      z-index: 1000;
+      background: var(--bg-glass);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
-
-      border-bottom:
-        1px solid var(--border);
+      border-bottom: 1px solid var(--border-subtle);
     }
 
-    nav {
-      height: 72px;
-
+    .nav-bar {
+      height: 70px;
       display: flex;
-
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
-
-      gap: 10px;
-
-      text-decoration: none;
-
-      font-size: 1.05rem;
-      font-weight: 800;
+      gap: 12px;
     }
 
-    .logo-icon {
-      color: var(--cyan);
-
-      font-size: 1.2rem;
-
-      animation:
-        spin 10s linear infinite;
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-indigo));
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
     }
 
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 0.96rem;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      color: var(--text-primary);
+    }
+
+    .brand-sub {
+      font-family: var(--font-mono);
+      font-size: 0.63rem;
+      color: var(--text-muted);
+      letter-spacing: 0.3px;
     }
 
     .nav-links {
       display: flex;
-
-      gap: 26px;
-
+      align-items: center;
+      gap: 6px;
       list-style: none;
+      padding: 4px;
+      border-radius: 999px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-subtle);
     }
 
     .nav-links a {
-      color: var(--muted);
-
-      text-decoration: none;
-
-      font-size: 0.82rem;
-
-      transition:
-        color 0.2s ease;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.81rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: all 0.18s ease;
     }
 
     .nav-links a:hover {
-      color: var(--cyan);
+      color: var(--text-primary);
+    }
+
+    .nav-links a.active {
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     }
 
     .nav-actions {
       display: flex;
-      gap: 10px;
+      align-items: center;
+      gap: 8px;
     }
 
-    .nav-icon {
-      width: 38px;
-      height: 38px;
+    .cmd-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-default);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 0.76rem;
+      font-weight: 500;
+      transition: 0.18s ease;
+    }
 
+    .cmd-btn:hover {
+      border-color: var(--border-strong);
+      color: var(--text-primary);
+    }
+
+    .kbd-pill {
+      padding: 1px 5px;
+      border-radius: 4px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-default);
+      font-family: var(--font-mono);
+      font-size: 0.63rem;
+      color: var(--text-muted);
+    }
+
+    .icon-btn {
+      width: 35px;
+      height: 35px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-default);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
       display: flex;
-
       align-items: center;
       justify-content: center;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 8px;
-
-      color: var(--muted);
-
-      text-decoration: none;
-
-      transition: 0.2s ease;
+      font-size: 0.85rem;
+      transition: 0.18s ease;
     }
 
-    .nav-icon:hover {
-      color: var(--cyan);
-
-      border-color:
-        var(--border-hover);
-
-      transform:
-        translateY(-2px);
+    .icon-btn:hover {
+      border-color: var(--border-strong);
+      color: var(--text-primary);
+      transform: translateY(-1px);
     }
 
+    .mobile-toggle {
+      display: none;
+    }
 
-    /* =========================================================
-       HERO
-    ========================================================= */
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-default);
+      padding: 16px 24px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: var(--shadow-modal);
+    }
 
-    .hero {
-      min-height: 100vh;
+    .mobile-drawer.open {
+      display: flex;
+    }
 
+    .mobile-drawer a {
+      padding: 10px 0;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    /* ==========================================================================
+       4. HERO SECTION & INTERACTIVE IDE WORKBENCH
+    ========================================================================== */
+    .hero-section {
+      padding-top: 122px;
+      padding-bottom: 64px;
+    }
+
+    .hero-grid {
       display: grid;
-
-      grid-template-columns:
-        1.05fr 0.95fr;
-
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
       align-items: center;
-
-      gap: 70px;
-
-      padding-top: 110px;
     }
 
-    .availability {
-      display: inline-flex;
-
+    .hero-pill-row {
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
-
-      gap: 9px;
-
-      width: fit-content;
-
-      padding:
-        7px 12px;
-
+      gap: 10px;
       margin-bottom: 22px;
-
-      border:
-        1px solid rgba(126,231,135,0.2);
-
-      background:
-        rgba(126,231,135,0.06);
-
-      border-radius: 7px;
-
-      color: var(--green);
-
-      font-size: 0.76rem;
     }
 
-    .availability-dot {
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 13px;
+      border-radius: 999px;
+      background: var(--emerald-tint);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      color: var(--accent-emerald);
+      font-size: 0.74rem;
+      font-weight: 600;
+    }
+
+    .pulse-dot {
       width: 7px;
       height: 7px;
-
-      background: var(--green);
-
       border-radius: 50%;
-
-      box-shadow:
-        0 0 12px
-        rgba(126,231,135,0.8);
+      background: var(--accent-emerald);
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+      animation: pulse 2s infinite;
     }
 
-    .hero h1 {
-      font-size:
-        clamp(3rem, 6vw, 5rem);
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55); }
+      70% { box-shadow: 0 0 0 7px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
 
-      line-height: 1.02;
+    .college-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 13px;
+      border-radius: 999px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-default);
+      color: var(--text-secondary);
+      font-family: var(--font-mono);
+      font-size: 0.71rem;
+      font-weight: 500;
+    }
 
-      letter-spacing:
-        -2.5px;
+    .college-pill i {
+      color: var(--accent-secondary);
+    }
 
-      margin-bottom: 24px;
-
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 4.6vw, 3.9rem);
       font-weight: 800;
+      line-height: 1.07;
+      letter-spacing: -1.8px;
+      margin-bottom: 20px;
+      color: var(--text-primary);
     }
 
-    .hero-description {
-      max-width: 650px;
-
-      color: var(--muted);
-
-      font-size: 1.05rem;
-
-      line-height: 1.8;
-
-      margin-bottom: 30px;
+    .hero-title .highlight {
+      background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .hero-description strong {
-      color: var(--muted-light);
+    .hero-lead {
+      font-size: 1.01rem;
+      line-height: 1.78;
+      color: var(--text-secondary);
+      max-width: 630px;
+      margin-bottom: 28px;
     }
 
-    .hero-buttons {
+    .hero-lead strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .cta-row {
       display: flex;
-
       flex-wrap: wrap;
-
-      gap: 12px;
-
-      margin-bottom: 40px;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 36px;
     }
 
     .btn {
       display: inline-flex;
-
       align-items: center;
-
-      gap: 9px;
-
-      padding:
-        12px 18px;
-
-      border-radius: 8px;
-
-      text-decoration: none;
-
-      font-size: 0.88rem;
-
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 0.84rem;
       font-weight: 600;
-
-      transition:
-        transform 0.2s ease,
-        border 0.2s ease,
-        background 0.2s ease;
-    }
-
-    .btn:hover {
-      transform:
-        translateY(-2px);
+      transition: all 0.18s ease;
+      border: 1px solid transparent;
     }
 
     .btn-primary {
-      background: var(--text);
-
-      color: var(--bg);
+      background: var(--btn-primary-bg);
+      color: var(--btn-primary-fg);
     }
 
     .btn-primary:hover {
-      background: var(--cyan);
+      background: var(--btn-primary-hover);
+      transform: translateY(-1px);
     }
 
-    .btn-outline {
-      border:
-        1px solid var(--border);
-
-      background:
-        rgba(255,255,255,0.025);
-
-      color: var(--text);
+    .btn-secondary {
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      border-color: var(--border-default);
+      box-shadow: var(--shadow-card);
     }
 
-    .btn-outline:hover {
-      border-color:
-        var(--border-hover);
-
-      background:
-        rgba(97,218,251,0.05);
+    .btn-secondary:hover {
+      border-color: var(--border-strong);
+      background: var(--bg-elevated);
+      transform: translateY(-1px);
     }
 
-    .hero-stats {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 35px;
-
-      padding-top: 22px;
-
-      border-top:
-        1px dashed var(--border);
+    .btn-accent {
+      background: var(--accent-tint);
+      color: var(--accent-secondary);
+      border-color: var(--border-accent);
     }
 
-    .hero-stat h3 {
-      font-size: 1.35rem;
+    .btn-accent:hover {
+      background: var(--accent-primary);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
 
+    /* Hero Key Credentials Strip */
+    .credential-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .cred-box {
+      padding: 13px 15px;
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-default);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .cred-box:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-2px);
+    }
+
+    .cred-val {
+      font-family: var(--font-display);
+      font-size: 1.28rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.4px;
+      line-height: 1.2;
       margin-bottom: 3px;
     }
 
-    .hero-stat p {
-      color: var(--muted);
-
-      font-family: var(--mono);
-
-      font-size: 0.72rem;
+    .cred-lbl {
+      font-family: var(--font-mono);
+      font-size: 0.64rem;
+      color: var(--text-muted);
+      letter-spacing: 0.2px;
     }
 
-
-    /* =========================================================
-       CODE WINDOW
-    ========================================================= */
-
-    .terminal {
-      border:
-        1px solid var(--border);
-
-      border-radius: 14px;
-
-      background:
-        rgba(15,15,20,0.88);
-
+    /* Hero IDE Console */
+    .ide-window {
+      background: var(--bg-code);
+      border: 1px solid #1e293b;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.05);
       overflow: hidden;
-
-      box-shadow:
-        0 30px 80px
-        rgba(0,0,0,0.55);
-
-      animation:
-        float 6s ease-in-out infinite;
+      color: #e2e8f0;
     }
 
-    @keyframes float {
-      0%,100% {
-        transform:
-          translateY(0);
-      }
-
-      50% {
-        transform:
-          translateY(-8px);
-      }
-    }
-
-    .terminal-header {
+    .ide-topbar {
       display: flex;
-
       align-items: center;
-
-      padding:
-        13px 16px;
-
-      border-bottom:
-        1px solid var(--border);
-
-      background:
-        rgba(255,255,255,0.035);
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: #0d131f;
+      border-bottom: 1px solid #1e293b;
+      gap: 10px;
     }
 
-    .dots {
+    .window-dots {
       display: flex;
-
       gap: 6px;
     }
 
-    .dot {
+    .w-dot {
       width: 10px;
       height: 10px;
-
       border-radius: 50%;
     }
 
-    .dot.red {
-      background: #ff5f56;
-    }
+    .w-dot.r { background: #ef4444; opacity: 0.85; }
+    .w-dot.y { background: #f59e0b; opacity: 0.85; }
+    .w-dot.g { background: #10b981; opacity: 0.85; }
 
-    .dot.yellow {
-      background: #ffbd2e;
-    }
-
-    .dot.green {
-      background: #27c93f;
-    }
-
-    .terminal-title {
-      margin: auto;
-
-      color: var(--muted);
-
-      font-family: var(--mono);
-
-      font-size: 0.75rem;
-    }
-
-    .terminal-body {
-      padding: 26px;
-
-      font-family: var(--mono);
-
-      font-size: 0.82rem;
-
-      line-height: 1.85;
-
+    .ide-tabs {
+      display: flex;
+      gap: 4px;
       overflow-x: auto;
     }
 
-    .keyword {
-      color: #ff7b72;
-    }
-
-    .function {
-      color: #d2a8ff;
-    }
-
-    .string {
-      color: #a5d6ff;
-    }
-
-    .property {
-      color: #79c0ff;
-    }
-
-    .comment {
-      color: #8b949e;
-    }
-
-    .success {
-      color: var(--green);
-    }
-
-
-    /* =========================================================
-       SECTIONS
-    ========================================================= */
-
-    section {
-      padding:
-        110px 0;
-    }
-
-    .section-label {
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 8px;
-
-      padding:
-        6px 11px;
-
-      margin-bottom: 14px;
-
-      border:
-        1px solid
-        rgba(97,218,251,0.2);
-
-      background:
-        rgba(97,218,251,0.05);
-
-      border-radius: 20px;
-
-      color: var(--cyan);
-
-      font-family: var(--mono);
-
+    .ide-tab {
+      padding: 5px 11px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
       font-size: 0.7rem;
+      color: #64748b;
+      border: 1px solid transparent;
+      transition: 0.15s ease;
+      white-space: nowrap;
+    }
 
+    .ide-tab:hover {
+      color: #cbd5e1;
+    }
+
+    .ide-tab.active {
+      background: #161f30;
+      color: #f8fafc;
+      border-color: #28354d;
+    }
+
+    .ide-body {
+      padding: 20px 22px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      line-height: 1.82;
+      min-height: 375px;
+      max-height: 410px;
+      overflow-y: auto;
+    }
+
+    .ide-pane {
+      display: none;
+    }
+
+    .ide-pane.active {
+      display: block;
+    }
+
+    .syn-kw { color: #f472b6; }
+    .syn-fn { color: #60a5fa; }
+    .syn-str { color: #67e8f9; }
+    .syn-prop { color: #cbd5e1; }
+    .syn-cmt { color: #64748b; }
+    .syn-num { color: #fbbf24; }
+    .syn-ok { color: #34d399; }
+
+    /* Interactive Terminal CLI */
+    .cli-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .cli-chip {
+      padding: 3px 9px;
+      border-radius: 5px;
+      background: #131b2b;
+      border: 1px solid #243047;
+      color: #94a3b8;
+      font-family: var(--font-mono);
+      font-size: 0.67rem;
+      transition: 0.15s ease;
+    }
+
+    .cli-chip:hover {
+      border-color: #3b82f6;
+      color: #ffffff;
+    }
+
+    .cli-log {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 12px;
+      font-size: 0.73rem;
+    }
+
+    .cli-prompt {
+      color: #60a5fa;
+      margin-right: 6px;
+    }
+
+    .cli-input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 10px;
+      border-top: 1px solid #1e293b;
+    }
+
+    .cli-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #f8fafc;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+    }
+
+    /* ==========================================================================
+       5. SECTION HEADERS
+    ========================================================================== */
+    section {
+      padding: 88px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    section.hero-section {
+      border-top: none;
+    }
+
+    .sec-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .sec-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.71rem;
+      font-weight: 600;
       text-transform: uppercase;
-
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
+      color: var(--accent-secondary);
+      margin-bottom: 8px;
     }
 
-    .section-title {
-      font-size:
-        clamp(2rem, 4vw, 2.8rem);
-
-      line-height: 1.1;
-
-      margin-bottom: 45px;
-
-      letter-spacing:
-        -1px;
+    .sec-eyebrow::before {
+      content: "";
+      width: 18px;
+      height: 1.5px;
+      background: var(--accent-primary);
+      display: inline-block;
     }
 
+    .sec-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.9px;
+      line-height: 1.15;
+      color: var(--text-primary);
+    }
 
-    /* =========================================================
-       ABOUT
-    ========================================================= */
+    .sec-desc {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      max-width: 540px;
+    }
 
-    .about-grid {
+    /* ==========================================================================
+       6. BENTO ENGINEERING OVERVIEW GRID
+    ========================================================================== */
+    .bento-grid {
       display: grid;
-
-      grid-template-columns:
-        1.1fr 0.9fr;
-
-      gap: 30px;
-    }
-
-    .about-card {
-      padding: 30px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 14px;
-
-      background:
-        var(--card);
-
-      backdrop-filter:
-        blur(12px);
-    }
-
-    .about-card p {
-      color: var(--muted);
-
-      margin-bottom: 15px;
-
-      line-height: 1.8;
-    }
-
-    .about-card strong {
-      color: var(--text);
-    }
-
-    .interest-list {
-      display: grid;
-
-      grid-template-columns:
-        repeat(2, 1fr);
-
-      gap: 12px;
-
-      margin-top: 20px;
-    }
-
-    .interest {
-      padding: 13px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 8px;
-
-      color: var(--muted-light);
-
-      font-size: 0.82rem;
-    }
-
-    .interest i {
-      color: var(--cyan);
-
-      margin-right: 7px;
-    }
-
-
-    /* =========================================================
-       SKILLS
-    ========================================================= */
-
-    .skills-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
+      grid-template-columns: repeat(12, 1fr);
       gap: 18px;
     }
 
-    .skill-card {
-      padding: 25px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 14px;
-
-      background:
-        var(--card);
-
-      transition:
-        transform 0.25s ease,
-        border 0.25s ease;
-    }
-
-    .skill-card:hover {
-      transform:
-        translateY(-4px);
-
-      border-color:
-        var(--border-hover);
-    }
-
-    .skill-icon {
-      width: 43px;
-      height: 43px;
-
+    .bento-card {
+      padding: 26px;
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
+    .span-7 { grid-column: span 7; }
+    .span-5 { grid-column: span 5; }
+    .span-4 { grid-column: span 4; }
+    .span-8 { grid-column: span 8; }
+
+    .bento-tag {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-
-      margin-bottom: 16px;
-
-      border-radius: 8px;
-
-      background:
-        rgba(97,218,251,0.08);
-
-      color: var(--cyan);
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.67rem;
+      color: var(--accent-secondary);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
     }
 
-    .skill-card h3 {
-      margin-bottom: 14px;
-
-      font-size: 1rem;
+    .bento-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.22rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
     }
 
-    .tags {
+    .bento-card p {
+      color: var(--text-secondary);
+      font-size: 0.86rem;
+      line-height: 1.68;
+    }
+
+    /* Percentile Distribution Visual Bar */
+    .percentile-meter {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: var(--radius-md);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-default);
+    }
+
+    .meter-top {
       display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 7px;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      margin-bottom: 8px;
     }
 
-    .tag {
-      padding:
-        5px 9px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 5px;
-
-      color: var(--muted);
-
-      background:
-        rgba(255,255,255,0.025);
-
-      font-family: var(--mono);
-
-      font-size: 0.68rem;
+    .meter-track {
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--border-default);
+      overflow: hidden;
+      position: relative;
     }
 
+    .meter-fill {
+      height: 100%;
+      width: 99.83%;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-emerald));
+      border-radius: 999px;
+    }
 
-    /* =========================================================
-       PROJECTS
-    ========================================================= */
+    /* Domain Pillars inside Bento */
+    .pillar-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+    }
 
-    .filter-bar {
+    .pillar-item {
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-default);
       display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
 
-      flex-wrap: wrap;
+    .pillar-item i {
+      color: var(--accent-secondary);
+      width: 18px;
+      text-align: center;
+    }
 
-      gap: 8px;
-
+    /* ==========================================================================
+       7. FLAGSHIP INTERACTIVE CASE STUDY: TRUSTPAY LIVE SIMULATOR
+    ========================================================================== */
+    .flagship-shell {
+      padding: 32px;
       margin-bottom: 28px;
+      border: 1px solid var(--border-accent);
+    }
+
+    .flagship-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 24px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .flagship-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .badge-pill {
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 600;
+      border: 1px solid var(--border-default);
+      background: var(--bg-elevated);
+      color: var(--text-secondary);
+    }
+
+    .badge-pill.emerald {
+      background: var(--emerald-tint);
+      border-color: rgba(16, 185, 129, 0.3);
+      color: var(--accent-emerald);
+    }
+
+    .badge-pill.blue {
+      background: var(--accent-tint);
+      border-color: var(--border-accent);
+      color: var(--accent-secondary);
+    }
+
+    .flagship-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    /* Interactive Pipeline Simulator Box */
+    .sim-box {
+      padding: 22px;
+      border-radius: var(--radius-md);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-default);
+      margin: 22px 0;
+    }
+
+    .sim-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .sim-label {
+      font-family: var(--font-mono);
+      font-size: 0.73rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sim-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .sim-btn {
+      padding: 7px 13px;
+      border-radius: var(--radius-xs);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      border: 1px solid var(--border-default);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      transition: all 0.18s ease;
+    }
+
+    .sim-btn:hover {
+      border-color: var(--border-strong);
+      color: var(--text-primary);
+    }
+
+    .sim-btn.active-legit {
+      background: var(--emerald-tint);
+      border-color: rgba(16, 185, 129, 0.45);
+      color: var(--accent-emerald);
+    }
+
+    .sim-btn.active-fraud {
+      background: var(--rose-tint);
+      border-color: rgba(244, 63, 94, 0.45);
+      color: var(--accent-rose);
+    }
+
+    .sim-btn.active-rate {
+      background: var(--amber-tint);
+      border-color: rgba(245, 158, 11, 0.45);
+      color: var(--accent-amber);
+    }
+
+    .sim-stages {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .sim-stage {
+      padding: 13px 12px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-default);
+      transition: all 0.25s ease;
+    }
+
+    .sim-stage.lit-ok {
+      border-color: var(--accent-emerald);
+      box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.25);
+    }
+
+    .sim-stage.lit-warn {
+      border-color: var(--accent-amber);
+      box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25);
+    }
+
+    .sim-stage.lit-block {
+      border-color: var(--accent-rose);
+      box-shadow: 0 0 0 1px rgba(244, 63, 94, 0.25);
+    }
+
+    .sim-stage-top {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--text-muted);
+      margin-bottom: 5px;
+    }
+
+    .sim-stage h5 {
+      font-size: 0.79rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--text-primary);
+    }
+
+    .sim-stage p {
+      font-size: 0.69rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    .sim-telemetry {
+      padding: 13px 16px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-code);
+      border: 1px solid #1e293b;
+      color: #cbd5e1;
+      font-family: var(--font-mono);
+      font-size: 0.73rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* ==========================================================================
+       8. PROJECTS FILTER & 2-COLUMN ARCHITECTURAL CARDS
+    ========================================================================== */
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
     }
 
     .filter-btn {
-      padding:
-        7px 13px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 6px;
-
-      background: transparent;
-
-      color: var(--muted);
-
-      cursor: pointer;
-
-      font-family: var(--mono);
-
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-default);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-family: var(--font-mono);
       font-size: 0.72rem;
-
-      transition: 0.2s ease;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.18s ease;
     }
 
-    .filter-btn:hover,
+    .filter-btn:hover {
+      border-color: var(--border-strong);
+      color: var(--text-primary);
+    }
+
     .filter-btn.active {
-      color: var(--bg);
-
-      background: var(--text);
-
-      border-color: var(--text);
+      background: var(--btn-primary-bg);
+      color: var(--btn-primary-fg);
+      border-color: var(--btn-primary-bg);
+      font-weight: 600;
     }
 
     .projects-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(2, 1fr);
-
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
-    .project-card {
+    .proj-card {
+      padding: 28px;
       display: flex;
-
       flex-direction: column;
-
-      min-height: 350px;
-
-      padding: 27px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 14px;
-
-      background:
-        var(--card);
-
-      transition:
-        transform 0.25s ease,
-        border 0.25s ease,
-        box-shadow 0.25s ease;
-    }
-
-    .project-card:hover {
-      transform:
-        translateY(-5px);
-
-      border-color:
-        var(--border-hover);
-
-      box-shadow:
-        0 20px 50px
-        rgba(0,0,0,0.25);
-    }
-
-    .project-top {
-      display: flex;
-
       justify-content: space-between;
+    }
 
+    .proj-head {
+      display: flex;
+      justify-content: space-between;
       align-items: flex-start;
-
-      margin-bottom: 18px;
-    }
-
-    .project-icon {
-      width: 42px;
-      height: 42px;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 8px;
-
-      background:
-        rgba(97,218,251,0.08);
-
-      color: var(--cyan);
-    }
-
-    .project-card h3 {
-      font-size: 1.2rem;
-
-      margin-bottom: 10px;
-    }
-
-    .project-card p {
-      color: var(--muted);
-
-      font-size: 0.86rem;
-
-      line-height: 1.75;
-
-      margin-bottom: 20px;
-    }
-
-    .project-tech {
-      margin-top: auto;
-    }
-
-    .project-links {
-      display: flex;
-
-      gap: 18px;
-
-      padding-top: 18px;
-
-      margin-top: 22px;
-
-      border-top:
-        1px solid var(--border);
-    }
-
-    .project-links a {
-      color: var(--muted-light);
-
-      text-decoration: none;
-
-      font-family: var(--mono);
-
-      font-size: 0.72rem;
-
-      transition:
-        color 0.2s ease;
-    }
-
-    .project-links a:hover {
-      color: var(--cyan);
-    }
-
-
-    /* =========================================================
-       EXPERIENCE / FOCUS
-    ========================================================= */
-
-    .focus-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      gap: 15px;
-    }
-
-    .focus-card {
-      padding: 22px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 12px;
-
-      background:
-        var(--card);
-    }
-
-    .focus-card i {
-      color: var(--cyan);
-
-      font-size: 1.3rem;
-
+      gap: 14px;
       margin-bottom: 14px;
     }
 
-    .focus-card h3 {
-      font-size: 0.95rem;
-
-      margin-bottom: 7px;
-    }
-
-    .focus-card p {
-      color: var(--muted);
-
-      font-size: 0.75rem;
-
-      line-height: 1.6;
-    }
-
-
-    /* =========================================================
-       EDUCATION
-    ========================================================= */
-
-    .education-card {
-      padding: 30px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 14px;
-
-      background:
-        var(--card);
-
+    .proj-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-default);
+      color: var(--accent-secondary);
       display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
 
+    .proj-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 5px;
+      color: var(--text-primary);
+    }
+
+    .proj-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+    }
+
+    .proj-desc {
+      color: var(--text-secondary);
+      font-size: 0.87rem;
+      line-height: 1.72;
+      margin-bottom: 18px;
+    }
+
+    .proj-desc strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .kpi-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+
+    .kpi-chip {
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-default);
+      font-family: var(--font-mono);
+      font-size: 0.67rem;
+      color: var(--text-secondary);
+    }
+
+    .kpi-chip strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tech-tag {
+      padding: 4px 9px;
+      border-radius: 5px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-subtle);
+      font-family: var(--font-mono);
+      font-size: 0.67rem;
+      color: var(--text-secondary);
+      transition: 0.15s ease;
+    }
+
+    .tech-tag:hover {
+      border-color: var(--border-strong);
+      color: var(--text-primary);
+    }
+
+    .proj-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
       justify-content: space-between;
-
-      gap: 30px;
+      gap: 10px;
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-subtle);
     }
 
-    .education-card h3 {
+    .proj-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .link-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: var(--radius-xs);
+      border: 1px solid var(--border-default);
+      background: var(--bg-elevated);
+      color: var(--text-secondary);
+      font-family: var(--font-mono);
+      font-size: 0.71rem;
+      font-weight: 500;
+      transition: 0.18s ease;
+    }
+
+    .link-chip:hover {
+      border-color: var(--border-strong);
+      color: var(--text-primary);
+    }
+
+    .link-chip.primary-chip {
+      background: var(--accent-tint);
+      border-color: var(--border-accent);
+      color: var(--accent-secondary);
+    }
+
+    .link-chip.primary-chip:hover {
+      background: var(--accent-primary);
+      color: #ffffff;
+    }
+
+    /* ==========================================================================
+       9. TECHNICAL CAPABILITIES MATRIX
+    ========================================================================== */
+    .skills-matrix {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skill-group {
+      padding: 24px;
+    }
+
+    .skill-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .skill-box-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      background: var(--accent-tint);
+      border: 1px solid var(--border-accent);
+      color: var(--accent-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.92rem;
+    }
+
+    .skill-group h3 {
+      font-family: var(--font-display);
+      font-size: 0.98rem;
+      font-weight: 700;
+    }
+
+    .skill-group .sub {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       10. HONORS, JEE STANDINGS & CODING PROFILES
+    ========================================================================== */
+    .honors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .honor-card {
+      padding: 26px;
+    }
+
+    .honor-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .honor-metric {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+      color: var(--text-primary);
+    }
+
+    .honor-card h3 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--accent-secondary);
+      margin-bottom: 6px;
+    }
+
+    .honor-card p {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .cp-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .cp-card {
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cp-card h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .cp-card span {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       11. EDUCATION TIMELINE
+    ========================================================================== */
+    .edu-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .edu-item {
+      padding: 26px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    .edu-item h3 {
+      font-family: var(--font-display);
       font-size: 1.1rem;
-
-      margin-bottom: 7px;
+      font-weight: 700;
+      margin-bottom: 4px;
     }
 
-    .degree {
-      color: var(--cyan);
+    .edu-degree {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--accent-secondary);
+      margin-bottom: 8px;
+    }
 
-      font-family: var(--mono);
+    .edu-item p {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      max-width: 780px;
+    }
 
-      font-size: 0.78rem;
+    .edu-meta {
+      text-align: right;
+      white-space: nowrap;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
 
+    .edu-date {
+      font-family: var(--font-mono);
+      font-size: 0.73rem;
+      color: var(--text-muted);
+    }
+
+    .edu-grade {
+      padding: 4px 11px;
+      border-radius: 6px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-default);
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    /* ==========================================================================
+       12. CONTACT & DUAL RESUME HUB
+    ========================================================================== */
+    .contact-panel {
+      padding: 56px 40px;
+      text-align: center;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .contact-panel h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 3.6vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.9px;
       margin-bottom: 12px;
     }
 
-    .education-card p {
-      color: var(--muted);
-
-      font-size: 0.82rem;
-    }
-
-    .education-date {
-      color: var(--muted);
-
-      font-family: var(--mono);
-
-      font-size: 0.72rem;
-
-      white-space: nowrap;
-    }
-
-
-    /* =========================================================
-       CONTACT
-    ========================================================= */
-
-    .contact-box {
-      text-align: center;
-
-      max-width: 850px;
-
-      margin: auto;
-
-      padding:
-        65px 30px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 18px;
-
-      background:
-        radial-gradient(
-          circle at top,
-          rgba(97,218,251,0.07),
-          transparent 55%
-        ),
-        var(--card);
-    }
-
-    .contact-box h2 {
-      font-size:
-        clamp(2rem, 4vw, 3rem);
-
-      margin-bottom: 15px;
-    }
-
-    .contact-box p {
-      color: var(--muted);
-
+    .contact-panel p {
+      color: var(--text-secondary);
       max-width: 600px;
-
-      margin:
-        0 auto 28px;
-
-      font-size: 0.9rem;
+      margin: 0 auto 28px;
+      font-size: 0.94rem;
     }
 
-    .contact-buttons {
+    .contact-actions {
       display: flex;
-
       justify-content: center;
-
       flex-wrap: wrap;
-
       gap: 10px;
     }
 
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-
-    footer {
-      padding:
-        35px 20px;
-
-      text-align: center;
-
-      border-top:
-        1px solid var(--border);
-
-      color: var(--muted);
-
-      font-family: var(--mono);
-
-      font-size: 0.7rem;
+    /* ==========================================================================
+       13. MODALS: PROJECT ARCHITECTURE SPEC MODAL & COMMAND PALETTE
+    ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(3, 6, 12, 0.72);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
 
+    .modal-backdrop.open {
+      display: flex;
+    }
 
-    /* =========================================================
-       SCROLL ANIMATION
-    ========================================================= */
+    .spec-modal {
+      width: min(760px, 100%);
+      max-height: 86vh;
+      overflow-y: auto;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-modal);
+      padding: 32px;
+    }
+
+    .spec-modal-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      padding-bottom: 18px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .spec-modal h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .spec-section {
+      margin-bottom: 18px;
+    }
+
+    .spec-section h4 {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-secondary);
+      margin-bottom: 6px;
+    }
+
+    .spec-section p,
+    .spec-section li {
+      font-size: 0.87rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .spec-section ul {
+      padding-left: 18px;
+    }
+
+    /* Command Palette */
+    .cmd-modal {
+      width: min(600px, 100%);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-modal);
+      overflow: hidden;
+    }
+
+    .cmd-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-default);
+    }
+
+    .cmd-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+    }
+
+    .cmd-list {
+      max-height: 340px;
+      overflow-y: auto;
+      padding: 8px;
+    }
+
+    .cmd-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      color: var(--text-secondary);
+      font-size: 0.84rem;
+      transition: 0.14s ease;
+    }
+
+    .cmd-row:hover {
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+    }
+
+    .cmd-row-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cmd-row-left i {
+      width: 18px;
+      text-align: center;
+      color: var(--accent-secondary);
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      color: var(--text-primary);
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: var(--shadow-modal);
+      transform: translateY(90px);
+      opacity: 0;
+      transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 10002;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .toast i {
+      color: var(--accent-emerald);
+    }
+
+    footer {
+      padding: 36px 0;
+      border-top: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      font-family: var(--font-mono);
+      font-size: 0.73rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-primary);
+    }
 
     .reveal {
       opacity: 0;
-
-      transform:
-        translateY(25px);
-
-      transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
+      transform: translateY(16px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
     }
 
     .reveal.visible {
       opacity: 1;
-
-      transform:
-        translateY(0);
+      transform: translateY(0);
     }
 
-
-    /* =========================================================
-       MOBILE
-    ========================================================= */
-
-    @media(max-width: 1000px) {
-
-      .hero {
+    /* ==========================================================================
+       14. RESPONSIVE DESIGN
+    ========================================================================== */
+    @media (max-width: 1080px) {
+      .hero-grid {
         grid-template-columns: 1fr;
-
-        gap: 45px;
       }
 
-      .skills-grid {
-        grid-template-columns:
-          repeat(2,1fr);
+      .span-7, .span-5, .span-4, .span-8 {
+        grid-column: span 12;
       }
 
-      .focus-grid {
-        grid-template-columns:
-          repeat(2,1fr);
+      .sim-stages {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .skills-matrix,
+      .honors-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cp-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-
-    @media(max-width: 720px) {
-
+    @media (max-width: 760px) {
       .container {
-        width:
-          min(100% - 28px, 1180px);
+        width: min(100% - 32px, 1240px);
       }
 
-      .nav-links {
+      .nav-links,
+      .cmd-btn {
         display: none;
       }
 
-      .hero {
-        padding-top: 105px;
+      .mobile-toggle {
+        display: flex;
       }
 
-      .hero h1 {
-        font-size: 3rem;
-      }
-
-      .hero-description {
-        font-size: 0.92rem;
-      }
-
-      .hero-stats {
-        gap: 20px;
-      }
-
-      .about-grid,
+      .credential-strip,
       .projects-grid,
-      .skills-grid {
+      .skills-matrix,
+      .honors-grid,
+      .pillar-list,
+      .sim-stages {
         grid-template-columns: 1fr;
       }
 
-      .focus-grid {
-        grid-template-columns:
-          repeat(2,1fr);
+      .edu-item {
+        flex-direction: column;
+        gap: 12px;
       }
 
-      .education-card {
-        flex-direction: column;
+      .edu-meta {
+        align-items: flex-start;
+        text-align: left;
+      }
 
-        gap: 10px;
+      .flagship-shell {
+        padding: 22px;
       }
 
       section {
-        padding:
-          80px 0;
+        padding: 68px 0;
       }
     }
 
-
-    @media(max-width: 450px) {
-
-      .hero h1 {
-        font-size: 2.55rem;
-      }
-
-      .focus-grid {
+    @media (max-width: 480px) {
+      .cp-grid {
         grid-template-columns: 1fr;
       }
-
-      .terminal-body {
-        font-size: 0.7rem;
-      }
     }
-
   </style>
 </head>
 
-
 <body>
 
+<div class="ambient-canvas"></div>
+<div id="scroll-progress"></div>
 
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
-
+<!-- ==========================================================================
+     HEADER NAVIGATION
+========================================================================== -->
 <header>
-
-  <nav class="container">
-
-    <a href="#home" class="logo">
-
-      <i class="fa-brands fa-react logo-icon"></i>
-
-      Raghav Gupta
-
+  <nav class="container nav-bar">
+    <a href="#home" class="brand">
+      <div class="brand-mark">RG</div>
+      <div class="brand-text">
+        <span class="brand-name">Raghav Gupta</span>
+        <span class="brand-sub">MNNIT ALLAHABAD · CSE '28</span>
+      </div>
     </a>
 
-
-    <ul class="nav-links mono">
-
-      <li>
-        <a href="#about">about</a>
-      </li>
-
-      <li>
-        <a href="#skills">skills</a>
-      </li>
-
-      <li>
-        <a href="#projects">projects</a>
-      </li>
-
-      <li>
-        <a href="#education">education</a>
-      </li>
-
-      <li>
-        <a href="#contact">contact</a>
-      </li>
-
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Stack</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
 
-
     <div class="nav-actions">
+      <button class="cmd-btn" onclick="openCmdPalette()" aria-label="Command Palette">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Quick Jump</span>
+        <span class="kbd-pill">Ctrl K</span>
+      </button>
 
-      <a
-        href="https://github.com/raghav12344"
-        target="_blank"
-        class="nav-icon"
-        aria-label="GitHub"
-      >
+      <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle Theme" title="Switch Daylight / Dark Theme">
+        <i class="fa-solid fa-moon" id="theme-icon"></i>
+      </button>
+
+      <a href="https://github.com/raghav12344" target="_blank" class="icon-btn" aria-label="GitHub" title="GitHub (@raghav12344)">
         <i class="fa-brands fa-github"></i>
       </a>
 
-      <a
-        href="https://linkedin.com/in/raghav-gupta1233"
-        target="_blank"
-        class="nav-icon"
-        aria-label="LinkedIn"
-      >
-        <i class="fa-brands fa-linkedin"></i>
+      <a href="https://linkedin.com/in/raghav-gupta1233" target="_blank" class="icon-btn" aria-label="LinkedIn" title="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
       </a>
 
-    </div>
+      <a href="https://leetcode.com/u/raghav_012006/" target="_blank" class="icon-btn" aria-label="LeetCode" title="LeetCode (@raghav_012006)">
+        <i class="fa-solid fa-code"></i>
+      </a>
 
+      <button class="icon-btn mobile-toggle" onclick="toggleMobileDrawer()" aria-label="Menu">
+        <i class="fa-solid fa-bars" id="mobile-icon"></i>
+      </button>
+    </div>
   </nav>
 
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="#overview" onclick="toggleMobileDrawer()">01 / Engineering Overview</a>
+    <a href="#projects" onclick="toggleMobileDrawer()">02 / Featured Projects (8)</a>
+    <a href="#skills" onclick="toggleMobileDrawer()">03 / Production Tech Stack</a>
+    <a href="#achievements" onclick="toggleMobileDrawer()">04 / JEE Ranks &amp; Coding Profiles</a>
+    <a href="#education" onclick="toggleMobileDrawer()">05 / Education (MNNIT Allahabad)</a>
+    <a href="#contact" onclick="toggleMobileDrawer()">06 / Contact &amp; Resumes</a>
+  </div>
 </header>
-
-
-
-<!-- =========================================================
-     HERO
-========================================================= -->
 
 <main>
 
-<section id="home">
+<!-- ==========================================================================
+     HERO SECTION
+========================================================================== -->
+<section id="home" class="hero-section">
+  <div class="container hero-grid">
 
-  <div class="container hero">
-
-
-    <div class="hero-content reveal">
-
-
-      <div class="availability mono">
-
-        <span class="availability-dot"></span>
-
-        Open to Software Engineering & AI/ML Opportunities
-
+    <!-- Left Column -->
+    <div class="reveal">
+      <div class="hero-pill-row">
+        <span class="status-pill">
+          <span class="pulse-dot"></span>
+          Available for SWE &amp; AI/ML Internships &amp; Roles
+        </span>
+        <span class="college-pill">
+          <i class="fa-solid fa-building-columns"></i>
+          B.Tech CSE · MNNIT Allahabad
+        </span>
       </div>
 
-
-      <h1>
-
-        Building
-
-        <span class="gradient-text">
-          Intelligent
-        </span>
-
-        Software.
-
+      <h1 class="hero-title">
+        Architecting <span class="highlight">Distributed Systems</span> &amp; Production AI.
       </h1>
 
-
-      <p class="hero-description">
-
-        I'm <strong>Raghav Gupta</strong>, a Computer Science &
-        Engineering student at
-
-        <strong>MNNIT Allahabad</strong>.
-
-        I build machine learning models, RAG applications,
-        AI-powered systems, and full-stack software using
-        Python, JavaScript, Java, React, Node.js and modern AI
-        technologies.
-
+      <p class="hero-lead">
+        I’m <strong>Raghav Gupta</strong>, a Computer Science &amp; Engineering undergraduate at
+        <strong>MNNIT Allahabad</strong> (<strong>JEE Main 99.83%ile</strong>, <strong>JEE Advanced AIR 7406</strong>).
+        I build fault-tolerant microservices, grounded <strong>RAG &amp; multi-agent MCP pipelines</strong>,
+        and low-latency machine learning engines using Python, C++, Java, React, Node.js, FastAPI, RabbitMQ, and Redis.
       </p>
 
-
-      <div class="hero-buttons">
-
-        <a
-          href="#projects"
-          class="btn btn-primary"
-        >
-
-          View Projects
-
+      <div class="cta-row">
+        <a href="#projects" class="btn btn-primary">
+          Explore Engineering Work
           <i class="fa-solid fa-arrow-right"></i>
-
         </a>
 
-
-        <a
-          href="resume.pdf"
-          target="_blank"
-          class="btn btn-outline"
-        >
-
-          <i class="fa-solid fa-file-lines"></i>
-
-          Resume
-
+        <a href="offcampus_resume.pdf" target="_blank" class="btn btn-secondary">
+          <i class="fa-regular fa-file-pdf"></i>
+          AI/ML &amp; SWE Resume
         </a>
 
-
-        <a
-          href="https://github.com/raghav12344"
-          target="_blank"
-          class="btn btn-outline"
-        >
-
-          <i class="fa-brands fa-github"></i>
-
-          GitHub
-
+        <a href="RaghavGupta_20243226_campusResume.pdf" target="_blank" class="btn btn-secondary">
+          <i class="fa-solid fa-graduation-cap"></i>
+          Campus Resume
         </a>
 
+        <button type="button" class="btn btn-accent" onclick="copyEmail()">
+          <i class="fa-regular fa-copy"></i>
+          graghav1233@gmail.com
+        </button>
       </div>
 
-
-      <div class="hero-stats">
-
-
-        <div class="hero-stat">
-
-          <h3>AI/ML</h3>
-
-          <p>CORE FOCUS</p>
-
+      <div class="credential-strip">
+        <div class="cred-box">
+          <div class="cred-val">99.83%ile</div>
+          <div class="cred-lbl">JEE MAIN (TOP 0.17%)</div>
         </div>
-
-
-        <div class="hero-stat">
-
-          <h3>RAG</h3>
-
-          <p>GENAI SYSTEMS</p>
-
+        <div class="cred-box">
+          <div class="cred-val">AIR 7406</div>
+          <div class="cred-lbl">JEE ADVANCED 2024</div>
         </div>
-
-
-        <div class="hero-stat">
-
-          <h3>MERN</h3>
-
-          <p>FULL STACK</p>
-
+        <div class="cred-box">
+          <div class="cred-val">400+</div>
+          <div class="cred-lbl">DSA PROBLEMS SOLVED</div>
         </div>
-
-
-        <div class="hero-stat">
-
-          <h3>Java</h3>
-
-          <p>SOFTWARE DEV</p>
-
+        <div class="cred-box">
+          <div class="cred-val">7.69 CPI</div>
+          <div class="cred-lbl">MNNIT ALLAHABAD CSE</div>
         </div>
-
-
       </div>
-
     </div>
 
-
-
-    <!-- TERMINAL -->
-
-    <div class="terminal reveal">
-
-      <div class="terminal-header">
-
-        <div class="dots">
-
-          <span class="dot red"></span>
-
-          <span class="dot yellow"></span>
-
-          <span class="dot green"></span>
-
+    <!-- Right Column: Multi-Tab Engineering Workbench -->
+    <div class="ide-window reveal">
+      <div class="ide-topbar">
+        <div class="window-dots">
+          <span class="w-dot r"></span>
+          <span class="w-dot y"></span>
+          <span class="w-dot g"></span>
         </div>
 
-        <div class="terminal-title">
-
-          raghav-gupta.tsx
-
+        <div class="ide-tabs">
+          <button class="ide-tab active" onclick="switchIdeTab(event, 'ide-profile')">engineer.config.ts</button>
+          <button class="ide-tab" onclick="switchIdeTab(event, 'ide-telemetry')">benchmarks.telemetry</button>
+          <button class="ide-tab" onclick="switchIdeTab(event, 'ide-shell')">interactive-cli</button>
         </div>
-
       </div>
 
-
-      <div class="terminal-body">
-
-
-<span class="comment">// developer profile</span>
-
-<span class="keyword">const</span>
-<span class="function">RaghavGupta</span> = {
-
-  <span class="property">education</span>:
-    <span class="string">"MNNIT Allahabad"</span>,
-
-  <span class="property">degree</span>:
-    <span class="string">"B.Tech CSE"</span>,
-
-  <span class="property">focus</span>: [
-
-    <span class="string">"Software Engineering"</span>,
-
-    <span class="string">"Machine Learning"</span>,
-
-    <span class="string">"Generative AI"</span>,
-
-    <span class="string">"Full-Stack Development"</span>
-
-  ],
-
-  <span class="property">languages</span>: [
-
-    <span class="string">"C++"</span>,
-
-    <span class="string">"Python"</span>,
-
-    <span class="string">"Java"</span>,
-
-    <span class="string">"JavaScript"</span>,
-
-    <span class="string">"SQL"</span>
-
-  ],
-
-  <span class="property">ai</span>: [
-
-    <span class="string">"Scikit-Learn"</span>,
-
-    <span class="string">"TensorFlow"</span>,
-
-    <span class="string">"CNN"</span>,
-
-    <span class="string">"RNN"</span>,
-
-    <span class="string">"LSTM"</span>,
-
-    <span class="string">"RAG"</span>,
-
-    <span class="string">"LLMs"</span>
-
-  ],
-
-  <span class="property">status</span>:
-
-    <span class="success">"open_to_work"</span>
-
+      <div class="ide-body">
+        <!-- Tab 1 -->
+        <div class="ide-pane active" id="ide-profile">
+<span class="syn-cmt">// Candidate Engineering Specification · MNNIT Allahabad</span>
+<span class="syn-kw">export const</span> <span class="syn-fn">RaghavGupta</span> = {
+  <span class="syn-prop">education</span>: <span class="syn-str">"B.Tech CSE @ MNNIT Allahabad (2024–2028)"</span>,
+  <span class="syn-prop">cpi</span>: <span class="syn-num">7.69</span>,
+  <span class="syn-prop">nationalRanks</span>: {
+    <span class="syn-prop">jeeMain2024</span>: <span class="syn-str">"99.83 Percentile (Top 0.17% of ~1.4M)"</span>,
+    <span class="syn-prop">jeeAdvanced2024</span>: <span class="syn-str">"All India Rank 7406"</span>
+  },
+  <span class="syn-prop">coreStack</span>: {
+    <span class="syn-prop">languages</span>: [<span class="syn-str">"Python"</span>, <span class="syn-str">"C++"</span>, <span class="syn-str">"Java (JDK 22)"</span>, <span class="syn-str">"JS/ES6+"</span>, <span class="syn-str">"SQL"</span>],
+    <span class="syn-prop">distributed</span>: [<span class="syn-str">"FastAPI"</span>, <span class="syn-str">"Express 5"</span>, <span class="syn-str">"RabbitMQ"</span>, <span class="syn-str">"Redis 7"</span>, <span class="syn-str">"Docker"</span>],
+    <span class="syn-prop">aiAndAgents</span>: [<span class="syn-str">"LangChain"</span>, <span class="syn-str">"CrewAI"</span>, <span class="syn-str">"MCP"</span>, <span class="syn-str">"LightGBM"</span>, <span class="syn-str">"ChromaDB"</span>],
+    <span class="syn-prop">databases</span>: [<span class="syn-str">"MySQL 8 (BCNF)"</span>, <span class="syn-str">"MongoDB"</span>, <span class="syn-str">"PostgreSQL"</span>]
+  },
+  <span class="syn-prop">algorithmicTrack</span>: <span class="syn-str">"400+ DSA Solved (260+ C++ Solutions on GitHub)"</span>,
+  <span class="syn-prop">status</span>: <span class="syn-ok">"READY_FOR_PRODUCTION"</span>
 };
+        </div>
 
+        <!-- Tab 2 -->
+        <div class="ide-pane" id="ide-telemetry">
+<span class="syn-cmt"># Verified Production &amp; Holdout Benchmarks Across Shipped Repos</span>
+<span class="syn-ok">[TRUSTPAY · 6-Container Distributed Fraud Platform]</span>
+  ├─ Async HTTP 202 Gateway Latency  : <span class="syn-num">&lt; 15.0 ms</span> (RabbitMQ decoupled)
+  ├─ Redis 7 ZSET Rate Limiter       : <span class="syn-num">5 req / 10s</span> sliding window (HTTP 429)
+  ├─ LightGBM Holdout Accuracy (20k) : <span class="syn-ok">99.98%</span> | ROC-AUC: <span class="syn-ok">0.9991</span>
+  ├─ Fraud Precision / False Alarms  : <span class="syn-ok">100.0% Precision</span> (0 False Positives)
+  └─ Single-Tx Inference Latency     : <span class="syn-num">2.35 ms</span> (285,000+ tx/sec batch)
 
-<span class="keyword">export default</span>
-RaghavGupta;
+<span class="syn-ok">[SQL-RAG-ASSISTANT · LangChain + ChromaDB + Gemini]</span>
+  ├─ Unstructured Corpus Indexed     : <span class="syn-num">6,764 pages</span> MySQL Reference PDFs
+  └─ Visual Output Engine            : <span class="syn-str">JSON Schema &rarr; 5 Interactive Plotly Charts</span>
 
+<span class="syn-ok">[ESTATESYNC · Java 22 + JavaFX MVC + JDBC BLOB]</span>
+  └─ Multi-Criteria Search Speedup   : <span class="syn-num">90% faster</span> across 500+ properties
+        </div>
 
+        <!-- Tab 3 -->
+        <div class="ide-pane" id="ide-shell">
+          <div class="cli-chips">
+            <button class="cli-chip" onclick="runCli('help')">help</button>
+            <button class="cli-chip" onclick="runCli('trustpay')">trustpay</button>
+            <button class="cli-chip" onclick="runCli('agents')">agents</button>
+            <button class="cli-chip" onclick="runCli('ranks')">ranks</button>
+            <button class="cli-chip" onclick="runCli('contact')">contact</button>
+            <button class="cli-chip" onclick="runCli('clear')">clear</button>
+          </div>
+          <div class="cli-log" id="cli-log">
+            <div><span class="cli-prompt">raghav@mnnit:~$</span> Click a command chip above or type <span class="syn-fn">help</span>.</div>
+          </div>
+          <div class="cli-input-wrap">
+            <span class="cli-prompt">raghav@mnnit:~$</span>
+            <input
+              type="text"
+              id="cli-input"
+              class="cli-input"
+              placeholder="type help, trustpay, agents, ranks, contact..."
+              onkeydown="if(event.key==='Enter'){runCli(this.value);this.value='';}"
+            >
+          </div>
+        </div>
       </div>
-
     </div>
 
   </div>
-
 </section>
 
 
-
-<!-- =========================================================
-     ABOUT
-========================================================= -->
-
-<section id="about">
-
+<!-- ==========================================================================
+     01 / BENTO ENGINEERING OVERVIEW
+========================================================================== -->
+<section id="overview">
   <div class="container">
-
-    <div class="section-label mono">
-
-      about.ts
-
+    <div class="sec-head reveal">
+      <div>
+        <div class="sec-eyebrow">01 / Engineering Architecture &amp; Pedigree</div>
+        <h2 class="sec-title">Built on Rigorous Fundamentals</h2>
+      </div>
+      <p class="sec-desc">
+        Combining top-0.17% quantitative problem-solving with production-grade distributed systems,
+        calibrated machine learning, and autonomous agentic workflows.
+      </p>
     </div>
 
-    <h2 class="section-title">
+    <div class="bento-grid">
 
-      About Me
-
-    </h2>
-
-
-    <div class="about-grid">
-
-
-      <div class="about-card reveal">
-
-        <p>
-
-          I'm a <strong>Computer Science & Engineering
-          undergraduate at MNNIT Allahabad</strong> interested
-          in building practical software and intelligent systems.
-
-        </p>
-
-        <p>
-
-          My current work spans from traditional machine
-          learning algorithms such as regression and logistic
-          regression to deep learning architectures including
-          <strong>CNNs, Vanilla RNNs and LSTMs</strong>.
-
-        </p>
-
-        <p>
-
-          I'm also exploring <strong>Generative AI,
-          Retrieval-Augmented Generation, embeddings,
-          vector search and multi-agent systems</strong>.
-
-        </p>
-
-        <p>
-
-          Alongside AI/ML, I enjoy developing
-          <strong>full-stack and backend applications</strong>
-          using React, Node.js, Java, MySQL and MongoDB.
-
-        </p>
-
-      </div>
-
-
-      <div class="about-card reveal">
-
-        <h3 style="margin-bottom:18px;">
-
-          What I'm Exploring
-
-        </h3>
-
-
-        <div class="interest-list">
-
-
-          <div class="interest">
-
-            <i class="fa-solid fa-brain"></i>
-
-            Machine Learning
-
-          </div>
-
-
-          <div class="interest">
-
-            <i class="fa-solid fa-network-wired"></i>
-
-            Deep Learning
-
-          </div>
-
-
-          <div class="interest">
-
-            <i class="fa-solid fa-robot"></i>
-
-            Generative AI
-
-          </div>
-
-
-          <div class="interest">
-
-            <i class="fa-solid fa-database"></i>
-
-            RAG & Vector Search
-
-          </div>
-
-
-          <div class="interest">
-
-            <i class="fa-solid fa-code"></i>
-
-            Software Engineering
-
-          </div>
-
-
-          <div class="interest">
-
-            <i class="fa-solid fa-globe"></i>
-
-            Full-Stack Development
-
-          </div>
-
-
+      <!-- Bento 1: Systems & AI Philosophy -->
+      <div class="surface-card bento-card span-7 reveal">
+        <div>
+          <div class="bento-tag"><i class="fa-solid fa-layer-group"></i> Full-Lifecycle Engineering</div>
+          <h3>From Low-Latency Message Queues to Grounded LLM Agents</h3>
+          <p>
+            I design software where <strong>system reliability</strong> and <strong>machine intelligence</strong> reinforce
+            each other. In <strong>TrustPay</strong>, synchronous HTTP threads never block on ~1.44s LLM forensic calls—requests
+            are rate-limited in <strong>Redis 7 ZSETs</strong>, queued via <strong>RabbitMQ</strong> in under 15ms, scored by a
+            calibrated 20-feature <strong>LightGBM</strong> engine in 2.35ms, and settled atomically in <strong>MySQL 8 (BCNF)</strong>
+            using row-level <code>FOR UPDATE</code> locks.
+          </p>
         </div>
 
+        <div class="pillar-list">
+          <div class="pillar-item"><i class="fa-solid fa-server"></i> Event-Driven Microservices (RabbitMQ / Redis)</div>
+          <div class="pillar-item"><i class="fa-solid fa-robot"></i> Multi-Agent MCP &amp; Grounded RAG Pipelines</div>
+          <div class="pillar-item"><i class="fa-solid fa-brain"></i> Calibrated LightGBM &amp; Deep Neural Nets</div>
+          <div class="pillar-item"><i class="fa-solid fa-shield-halved"></i> ACID Ledgers, JWT RBAC &amp; CI/CD Pipelines</div>
+        </div>
+      </div>
+
+      <!-- Bento 2: National Engineering Entrance Percentile Visual -->
+      <div class="surface-card bento-card span-5 reveal">
+        <div>
+          <div class="bento-tag"><i class="fa-solid fa-award"></i> Quantitative Benchmark</div>
+          <h3>Top 0.17% Nationwide in JEE Main 2024</h3>
+          <p>
+            Secured <strong>99.83 Percentile</strong> among <strong>~1,400,000 candidates</strong> in JEE Main 2024
+            and <strong>All India Rank 7406</strong> in JEE Advanced 2024, earning admission to Computer Science &amp;
+            Engineering at <strong>MNNIT Allahabad</strong>.
+          </p>
+        </div>
+
+        <div class="percentile-meter">
+          <div class="meter-top">
+            <span>JEE Main 2024 National Standing</span>
+            <strong style="color:var(--accent-emerald);">99.83 Percentile · AIR 7406 (Adv)</strong>
+          </div>
+          <div class="meter-track">
+            <div class="meter-fill"></div>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:0.65rem; color:var(--text-muted); margin-top:8px;">
+            <span>1.4M+ Candidates</span>
+            <span>400+ DSA Problems Solved (C++)</span>
+          </div>
+        </div>
       </div>
 
     </div>
-
   </div>
-
 </section>
 
 
-
-<!-- =========================================================
-     SKILLS
-========================================================= -->
-
-<section id="skills">
-
-  <div class="container">
-
-    <div class="section-label mono">
-
-      skills.json
-
-    </div>
-
-    <h2 class="section-title">
-
-      Technical Stack
-
-    </h2>
-
-
-    <div class="skills-grid">
-
-
-      <!-- ML -->
-
-      <div class="skill-card reveal">
-
-        <div class="skill-icon">
-
-          <i class="fa-solid fa-brain"></i>
-
-        </div>
-
-        <h3>Machine Learning & AI</h3>
-
-        <div class="tags">
-
-          <span class="tag">Scikit-Learn</span>
-
-          <span class="tag">TensorFlow</span>
-
-          <span class="tag">Keras</span>
-
-          <span class="tag">NumPy</span>
-
-          <span class="tag">Pandas</span>
-
-          <span class="tag">CNN</span>
-
-          <span class="tag">RNN</span>
-
-          <span class="tag">LSTM</span>
-
-          <span class="tag">Regression</span>
-
-          <span class="tag">Classification</span>
-
-        </div>
-
-      </div>
-
-
-      <!-- GenAI -->
-
-      <div class="skill-card reveal">
-
-        <div class="skill-icon">
-
-          <i class="fa-solid fa-robot"></i>
-
-        </div>
-
-        <h3>Generative AI</h3>
-
-        <div class="tags">
-
-          <span class="tag">RAG</span>
-
-          <span class="tag">LangChain</span>
-
-          <span class="tag">ChromaDB</span>
-
-          <span class="tag">Embeddings</span>
-
-          <span class="tag">Gemini</span>
-
-          <span class="tag">CrewAI</span>
-
-          <span class="tag">MCP</span>
-
-          <span class="tag">LLMs</span>
-
-        </div>
-
-      </div>
-
-
-      <!-- Languages -->
-
-      <div class="skill-card reveal">
-
-        <div class="skill-icon">
-
-          <i class="fa-solid fa-code"></i>
-
-        </div>
-
-        <h3>Programming</h3>
-
-        <div class="tags">
-
-          <span class="tag">C</span>
-
-          <span class="tag">C++</span>
-
-          <span class="tag">Python</span>
-
-          <span class="tag">Java</span>
-
-          <span class="tag">JavaScript</span>
-
-          <span class="tag">SQL</span>
-
-        </div>
-
-      </div>
-
-
-      <!-- Web -->
-
-      <div class="skill-card reveal">
-
-        <div class="skill-icon">
-
-          <i class="fa-solid fa-globe"></i>
-
-        </div>
-
-        <h3>Web Development</h3>
-
-        <div class="tags">
-
-          <span class="tag">React.js</span>
-
-          <span class="tag">Node.js</span>
-
-          <span class="tag">Express.js</span>
-
-          <span class="tag">AngularJS</span>
-
-          <span class="tag">Tailwind CSS</span>
-
-          <span class="tag">REST APIs</span>
-
-        </div>
-
-      </div>
-
-
-      <!-- Databases -->
-
-      <div class="skill-card reveal">
-
-        <div class="skill-icon">
-
-          <i class="fa-solid fa-database"></i>
-
-        </div>
-
-        <h3>Databases</h3>
-
-        <div class="tags">
-
-          <span class="tag">MySQL</span>
-
-          <span class="tag">MongoDB</span>
-
-          <span class="tag">PostgreSQL</span>
-
-          <span class="tag">JDBC</span>
-
-          <span class="tag">ChromaDB</span>
-
-        </div>
-
-      </div>
-
-
-      <!-- Tools -->
-
-      <div class="skill-card reveal">
-
-        <div class="skill-icon">
-
-          <i class="fa-solid fa-screwdriver-wrench"></i>
-
-        </div>
-
-        <h3>Tools & Platforms</h3>
-
-        <div class="tags">
-
-          <span class="tag">Git</span>
-
-          <span class="tag">GitHub</span>
-
-          <span class="tag">VS Code</span>
-
-          <span class="tag">IntelliJ</span>
-
-          <span class="tag">Postman</span>
-
-          <span class="tag">Streamlit</span>
-
-          <span class="tag">Vercel</span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     PROJECTS
-========================================================= -->
-
+<!-- ==========================================================================
+     02 / FEATURED ENGINEERING PROJECTS & INTERACTIVE TRUSTPAY SANDBOX
+========================================================================== -->
 <section id="projects">
-
   <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <div class="sec-eyebrow">02 / Selected Engineering Work</div>
+        <h2 class="sec-title">Production Systems &amp; Case Studies</h2>
+      </div>
 
-    <div class="section-label mono">
-
-      projects/
-
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterProjects(event, 'all')">All Projects (8)</button>
+        <button class="filter-btn" onclick="filterProjects(event, 'ai')">AI / ML / RAG (4)</button>
+        <button class="filter-btn" onclick="filterProjects(event, 'web')">Full-Stack &amp; Cloud (3)</button>
+        <button class="filter-btn" onclick="filterProjects(event, 'java')">Java / Desktop (1)</button>
+        <button class="filter-btn" onclick="filterProjects(event, 'dsa')">C++ DSA (1)</button>
+      </div>
     </div>
 
-    <h2 class="section-title">
+    <!-- FLAGSHIP PROJECT #1: TRUSTPAY WITH INTERACTIVE PIPELINE SIMULATOR -->
+    <article class="surface-card flagship-shell project-item reveal" data-category="ai web">
+      <div class="flagship-header">
+        <div>
+          <div class="flagship-badges">
+            <span class="badge-pill emerald"><i class="fa-solid fa-circle-check"></i> Flagship Production System</span>
+            <span class="badge-pill blue">6 Docker Containers · 5-Job GitHub Actions CI/CD</span>
+            <span class="badge-pill">Sept 2026 – Oct 2026</span>
+          </div>
+          <h3 class="flagship-title">TrustPay — Distributed Banking &amp; Real-Time AI Fraud Detection Engine</h3>
+          <p class="proj-desc" style="max-width:880px; margin-bottom:0;">
+            Full-stack <strong>6-service event-driven financial platform</strong> decoupling synchronous payment
+            ingestion (<strong>HTTP 202 Accepted in &lt;15ms</strong>) from asynchronous AI fraud scoring via
+            <strong>RabbitMQ</strong> (<code>amqplib</code> &rarr; Python <code>aio-pika</code>). Guards routes with a
+            <strong>Redis 7 Sorted-Set (ZSET) Sliding-Window Rate Limiter</strong> (5 req/10s &rarr; <code>HTTP 429</code>)
+            and scores transactions in <strong>2.35ms</strong> using a calibrated 20-feature <strong>LightGBM classifier</strong>
+            (Haversine impossible travel speed, 10m velocity burst, Z-score outlier, balance drain ratio) paired with
+            <strong>Groq Llama 3.3 70B</strong> forensic explanations and atomic <strong>MySQL 8 (BCNF)</strong>
+            <code>SELECT ... FOR UPDATE</code> stored procedures.
+          </p>
+        </div>
 
-      Featured Work
+        <div class="proj-links">
+          <a href="https://trust-pay-chi.vercel.app" target="_blank" class="link-chip primary-chip">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Vercel App
+          </a>
+          <a href="https://github.com/raghav12344/TrustPay" target="_blank" class="link-chip">
+            <i class="fa-brands fa-github"></i> Source Code
+          </a>
+          <a href="https://github.com/raghav12344/TrustPay/blob/main/TRUSTPAY_PROJECT_REPORT.pdf" target="_blank" class="link-chip">
+            <i class="fa-regular fa-file-pdf"></i> 20-Page PDF Report
+          </a>
+          <button type="button" class="link-chip" onclick="openSpecModal('trustpay')">
+            <i class="fa-solid fa-sliders"></i> System Specs
+          </button>
+        </div>
+      </div>
 
-    </h2>
+      <!-- INTERACTIVE 6-TIER ARCHITECTURE SIMULATOR -->
+      <div class="sim-box">
+        <div class="sim-controls">
+          <div class="sim-label">
+            <i class="fa-solid fa-bolt" style="color:var(--accent-secondary);"></i>
+            Interactive 6-Service Transaction Pipeline Simulator — Click a scenario to trace live execution:
+          </div>
+          <div class="sim-btn-group">
+            <button type="button" class="sim-btn active-legit" id="btn-sim-legit" onclick="simulateTrustPay('legit')">
+              1. Legitimate Transfer ($120)
+            </button>
+            <button type="button" class="sim-btn" id="btn-sim-fraud" onclick="simulateTrustPay('fraud')">
+              2. Impossible Travel Attack (9,400 km/h)
+            </button>
+            <button type="button" class="sim-btn" id="btn-sim-rate" onclick="simulateTrustPay('rate')">
+              3. Velocity Flood (6th req / 8s &rarr; 429)
+            </button>
+          </div>
+        </div>
 
+        <div class="sim-stages" id="sim-stages">
+          <div class="sim-stage lit-ok" id="st-1">
+            <div class="sim-stage-top"><span>01 · CLIENT</span><i class="fa-brands fa-react"></i></div>
+            <h5>React 19 + Vite</h5>
+            <p id="st-1-txt">Captures HTML5 GPS coords &amp; device UUID fingerprint.</p>
+          </div>
+          <div class="sim-stage lit-ok" id="st-2">
+            <div class="sim-stage-top"><span>02 · REDIS 7</span><i class="fa-solid fa-gauge-high"></i></div>
+            <h5>ZSET Rate Guard</h5>
+            <p id="st-2-txt">Window count: 1/5 req in 10s. Allowed (&lt;1ms).</p>
+          </div>
+          <div class="sim-stage lit-ok" id="st-3">
+            <div class="sim-stage-top"><span>03 · EXPRESS 5</span><i class="fa-brands fa-node-js"></i></div>
+            <h5>API Gateway</h5>
+            <p id="st-3-txt">JWT verified, logs PENDING row, returns 202 in 11ms.</p>
+          </div>
+          <div class="sim-stage lit-ok" id="st-4">
+            <div class="sim-stage-top"><span>04 · RABBITMQ</span><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+            <h5>AMQP Broker</h5>
+            <p id="st-4-txt">Persists payload to durable fraud_evaluation_queue.</p>
+          </div>
+          <div class="sim-stage lit-ok" id="st-5">
+            <div class="sim-stage-top"><span>05 · FASTAPI AI</span><i class="fa-solid fa-brain"></i></div>
+            <h5>LightGBM + Llama 3.3</h5>
+            <p id="st-5-txt">Risk score: 1.8/100 (2.35ms). Marked SAFE.</p>
+          </div>
+          <div class="sim-stage lit-ok" id="st-6">
+            <div class="sim-stage-top"><span>06 · MYSQL 8</span><i class="fa-solid fa-database"></i></div>
+            <h5>ACID BCNF Ledger</h5>
+            <p id="st-6-txt">FOR UPDATE lock commits debit/credit atomically.</p>
+          </div>
+        </div>
 
-    <div class="filter-bar mono">
+        <div class="sim-telemetry" id="sim-telemetry">
+          <span><strong style="color:#34d399;">[VERDICT: COMPLETED]</strong> LightGBM Risk: <strong>1.8%</strong> · Haversine Speed: <strong>0.0 km/h</strong> · Z-Score: <strong>0.41</strong></span>
+          <span>Gateway: <strong>11.4 ms (HTTP 202)</strong> | ML Inference: <strong>2.35 ms</strong></span>
+        </div>
+      </div>
 
-      <button
-        class="filter-btn active"
-        onclick="filterProjects(event,'all')"
-      >
-        all
-      </button>
+      <div class="kpi-row">
+        <span class="kpi-chip"><strong>99.98%</strong> Holdout Accuracy (0.9991 ROC-AUC on 20k tx)</span>
+        <span class="kpi-chip"><strong>100.0%</strong> Fraud Precision (Zero False Alarms)</span>
+        <span class="kpi-chip"><strong>2.35 ms</strong> LightGBM Inference (285k QPS batch)</span>
+        <span class="kpi-chip"><strong>&lt;15 ms</strong> Non-Blocking HTTP 202 Ingestion</span>
+        <span class="kpi-chip"><strong>8 BCNF Tables</strong> MySQL 8 Stored Procs &amp; Triggers</span>
+      </div>
 
-      <button
-        class="filter-btn"
-        onclick="filterProjects(event,'ai')"
-      >
-        ai-ml
-      </button>
+      <div class="tech-tags">
+        <span class="tech-tag">React 19 (Vite)</span>
+        <span class="tech-tag">Node.js / Express 5</span>
+        <span class="tech-tag">Python / FastAPI</span>
+        <span class="tech-tag">LightGBM (20 Features)</span>
+        <span class="tech-tag">Groq Llama 3.3 70B</span>
+        <span class="tech-tag">RabbitMQ (AMQP)</span>
+        <span class="tech-tag">Redis 7 (ZSET / TTL Cache)</span>
+        <span class="tech-tag">MySQL 8 (BCNF / FOR UPDATE)</span>
+        <span class="tech-tag">Docker Compose</span>
+        <span class="tech-tag">GitHub Actions CI/CD</span>
+      </div>
+    </article>
 
-      <button
-        class="filter-btn"
-        onclick="filterProjects(event,'web')"
-      >
-        web
-      </button>
-
-      <button
-        class="filter-btn"
-        onclick="filterProjects(event,'java')"
-      >
-        java
-      </button>
-
-    </div>
-
-
+    <!-- REMAINING 7 PROJECTS IN 2-COLUMN ARCHITECTURAL GRID -->
     <div class="projects-grid">
 
-
-      <!-- ML MODELS -->
-
-      <article
-        class="project-card reveal"
-        data-category="ai"
-      >
-
+      <!-- 2. SQL Learning Assistant -->
+      <article class="surface-card proj-card project-item reveal" data-category="ai">
         <div>
-
-          <div class="project-top">
-
+          <div class="proj-head">
             <div>
-
-              <h3>
-                Machine Learning & Deep Learning Models
-              </h3>
-
+              <h3 class="proj-title">SQL Learning Assistant</h3>
+              <div class="proj-meta">
+                <span>July 2026 – Aug 2026</span>
+                <span class="badge-pill blue">RAG + Dynamic Plotly Engine</span>
+              </div>
             </div>
-
-            <div class="project-icon">
-
-              <i class="fa-solid fa-chart-line"></i>
-
-            </div>
-
+            <div class="proj-icon"><i class="fa-solid fa-database"></i></div>
           </div>
 
-
-          <p>
-
-            Collection of supervised learning and deep
-            learning implementations covering regression,
-            classification, image recognition, time-series
-            forecasting and NLP.
-
+          <p class="proj-desc">
+            End-to-end <strong>Retrieval-Augmented Generation (RAG)</strong> application enabling semantic querying
+            over <strong>6,764 pages of unstructured MySQL documentation PDFs</strong> using <strong>LangChain,
+            ChromaDB, and HuggingFace Embeddings</strong>. Integrates <strong>Google Gemini</strong> via custom
+            prompt chains for grounded, zero-hallucination SQL synthesis and automatically extracts numerical data
+            into validated JSON to render interactive <strong>Plotly</strong> charts (bar, line, pie, scatter, histogram).
           </p>
 
-
-          <div class="project-tech tags">
-
-            <span class="tag">Python</span>
-
-            <span class="tag">Scikit-Learn</span>
-
-            <span class="tag">TensorFlow</span>
-
-            <span class="tag">Keras</span>
-
-            <span class="tag">CNN</span>
-
-            <span class="tag">RNN</span>
-
-            <span class="tag">LSTM</span>
-
+          <div class="kpi-row">
+            <span class="kpi-chip"><strong>6,764 Pages</strong> Indexed in ChromaDB</span>
+            <span class="kpi-chip"><strong>5 Chart Types</strong> Auto-Synthesized</span>
+            <span class="kpi-chip"><strong>Context-Bounded</strong> Zero Hallucination</span>
           </div>
 
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">LangChain</span>
+            <span class="tech-tag">ChromaDB</span>
+            <span class="tech-tag">HuggingFace Embeddings</span>
+            <span class="tech-tag">Google Gemini API</span>
+            <span class="tech-tag">Plotly</span>
+            <span class="tech-tag">Streamlit</span>
+          </div>
         </div>
 
-
-        <div class="project-links mono">
-
-          <a
-            href="https://github.com/raghav12344/ml-models"
-            target="_blank"
-          >
-
-            <i class="fa-brands fa-github"></i>
-
-            source-code
-
-          </a>
-
+        <div class="proj-footer">
+          <div class="proj-links">
+            <a href="https://github.com/raghav12344/sqlLearningAssistant" target="_blank" class="link-chip primary-chip">
+              <i class="fa-brands fa-github"></i> Source Code
+            </a>
+          </div>
+          <button type="button" class="link-chip" onclick="openSpecModal('sqlrag')">
+            <i class="fa-solid fa-diagram-project"></i> Architecture Specs
+          </button>
         </div>
-
       </article>
 
-
-
-      <!-- SQL RAG -->
-
-      <article
-        class="project-card reveal"
-        data-category="ai"
-      >
-
+      <!-- 3. AI Fitness Coach -->
+      <article class="surface-card proj-card project-item reveal" data-category="ai">
         <div>
-
-          <div class="project-top">
-
+          <div class="proj-head">
             <div>
-
-              <h3>
-                SQL Learning Assistant
-              </h3>
-
+              <h3 class="proj-title">AI Fitness Coach</h3>
+              <div class="proj-meta">
+                <span>July 2026 – Aug 2026</span>
+                <span class="badge-pill blue">CrewAI + MCP Server</span>
+              </div>
             </div>
-
-            <div class="project-icon">
-
-              <i class="fa-solid fa-database"></i>
-
-            </div>
-
+            <div class="proj-icon"><i class="fa-solid fa-robot"></i></div>
           </div>
 
-
-          <p>
-
-            RAG-based document question-answering system
-            that retrieves relevant SQL documentation and
-            generates context-aware explanations using
-            embeddings, vector search and Gemini.
-
+          <p class="proj-desc">
+            Hierarchical <strong>CrewAI multi-agent system</strong> (Manager, Researcher, and Coach agents)
+            powered by a custom <strong>Model Context Protocol (MCP)</strong> tool server for dynamic discovery of
+            external tools (<code>web_search</code>, <code>write_blog_markdown</code>) and real-time scientific
+            literature retrieval via <strong>Tavily API</strong>. Delivered through an interactive <strong>Streamlit</strong>
+            interface with session state persistence and automated Markdown blog generation.
           </p>
 
-
-          <div class="project-tech tags">
-
-            <span class="tag">Python</span>
-
-            <span class="tag">LangChain</span>
-
-            <span class="tag">RAG</span>
-
-            <span class="tag">ChromaDB</span>
-
-            <span class="tag">Gemini</span>
-
-            <span class="tag">Streamlit</span>
-
+          <div class="kpi-row">
+            <span class="kpi-chip"><strong>3 Autonomous Agents</strong> Hierarchical Crew</span>
+            <span class="kpi-chip"><strong>MCP Server</strong> Dynamic Tool Discovery</span>
           </div>
 
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">CrewAI</span>
+            <span class="tech-tag">Model Context Protocol (MCP)</span>
+            <span class="tech-tag">Google Gemini</span>
+            <span class="tech-tag">Tavily Search API</span>
+            <span class="tech-tag">Streamlit</span>
+          </div>
         </div>
 
-
-        <div class="project-links mono">
-
-          <a
-            href="https://github.com/raghav12344/sqlLearningAssistant"
-            target="_blank"
-          >
-
-            <i class="fa-brands fa-github"></i>
-
-            source-code
-
-          </a>
-
+        <div class="proj-footer">
+          <div class="proj-links">
+            <a href="https://github.com/raghav12344/Ai-Fitness-Coach" target="_blank" class="link-chip primary-chip">
+              <i class="fa-brands fa-github"></i> Source Code
+            </a>
+          </div>
+          <button type="button" class="link-chip" onclick="openSpecModal('fitness')">
+            <i class="fa-solid fa-diagram-project"></i> Architecture Specs
+          </button>
         </div>
-
       </article>
 
-
-
-      <!-- AI FITNESS -->
-
-      <article
-        class="project-card reveal"
-        data-category="ai"
-      >
-
+      <!-- 4. EstateSync -->
+      <article class="surface-card proj-card project-item reveal" data-category="java">
         <div>
-
-          <div class="project-top">
-
+          <div class="proj-head">
             <div>
-
-              <h3>
-                AI Fitness Coach
-              </h3>
-
+              <h3 class="proj-title">EstateSync</h3>
+              <div class="proj-meta">
+                <span>June 2026 – July 2026</span>
+                <span class="badge-pill emerald">90% Faster Property Lookup</span>
+              </div>
             </div>
-
-            <div class="project-icon">
-
-              <i class="fa-solid fa-dumbbell"></i>
-
-            </div>
-
+            <div class="proj-icon"><i class="fa-brands fa-java"></i></div>
           </div>
 
-
-          <p>
-
-            Multi-agent AI application using CrewAI, Gemini
-            and MCP. Implements a hierarchical workflow with
-            researcher, coach and manager agents for
-            evidence-based responses.
-
+          <p class="proj-desc">
+            Modular <strong>MVC desktop application</strong> engineered with <strong>Java (JDK 22) and JavaFX</strong>
+            for managing real estate portfolios, customer ledgers, and property transactions. Integrates
+            <strong>MySQL via JDBC</strong> using parameterized statements, relational joins, ACID transactions, and
+            <strong>BLOB binary image storage</strong>. Accelerates property discovery by <strong>90% across 500+
+            listings</strong> and exports automated Excel/PDF reports via <strong>Apache POI and iText</strong>.
           </p>
 
-
-          <div class="project-tech tags">
-
-            <span class="tag">Python</span>
-
-            <span class="tag">CrewAI</span>
-
-            <span class="tag">Gemini</span>
-
-            <span class="tag">MCP</span>
-
-            <span class="tag">Tavily</span>
-
-            <span class="tag">Streamlit</span>
-
+          <div class="kpi-row">
+            <span class="kpi-chip"><strong>90% Faster</strong> Search &amp; Filtering</span>
+            <span class="kpi-chip"><strong>500+</strong> Properties Managed</span>
+            <span class="kpi-chip"><strong>POI &amp; iText</strong> Excel/PDF Export</span>
           </div>
 
+          <div class="tech-tags">
+            <span class="tech-tag">Java (JDK 22)</span>
+            <span class="tech-tag">JavaFX (MVC)</span>
+            <span class="tech-tag">JDBC</span>
+            <span class="tech-tag">MySQL (BLOB / Transactions)</span>
+            <span class="tech-tag">Apache POI</span>
+            <span class="tech-tag">iText PDF</span>
+          </div>
         </div>
 
-
-        <div class="project-links mono">
-
-          <a
-            href="https://github.com/raghav12344/Ai-Fitness-Coach"
-            target="_blank"
-          >
-
-            <i class="fa-brands fa-github"></i>
-
-            source-code
-
-          </a>
-
+        <div class="proj-footer">
+          <div class="proj-links">
+            <a href="https://github.com/raghav12344/estatesync" target="_blank" class="link-chip">
+              <i class="fa-brands fa-github"></i> Source Code
+            </a>
+            <a href="https://drive.google.com/file/d/1QX8Yk3TRVe9T7NRysy_X040YGXCTtX68/view?usp=sharing" target="_blank" class="link-chip primary-chip">
+              <i class="fa-solid fa-circle-play"></i> Demo Video
+            </a>
+          </div>
+          <button type="button" class="link-chip" onclick="openSpecModal('estatesync')">
+            <i class="fa-solid fa-diagram-project"></i> Architecture Specs
+          </button>
         </div>
-
       </article>
 
-
-
-      <!-- ESTATE SYNC -->
-
-      <article
-        class="project-card reveal"
-        data-category="java"
-      >
-
+      <!-- 5. Medicose -->
+      <article class="surface-card proj-card project-item reveal" data-category="web">
         <div>
-
-          <div class="project-top">
-
+          <div class="proj-head">
             <div>
-
-              <h3>
-                EstateSync
-              </h3>
-
+              <h3 class="proj-title">Medicose</h3>
+              <div class="proj-meta">
+                <span>June 2025 – July 2025</span>
+                <span class="badge-pill blue">MERN + Gemini AI</span>
+              </div>
             </div>
-
-            <div class="project-icon">
-
-              <i class="fa-solid fa-city"></i>
-
-            </div>
-
+            <div class="proj-icon"><i class="fa-solid fa-notes-medical"></i></div>
           </div>
 
-
-          <p>
-
-            JavaFX desktop application for real estate
-            management with MySQL integration, authentication,
-            property search, CRUD operations and database-driven
-            workflows.
-
+          <p class="proj-desc">
+            Centralized <strong>MERN-stack healthcare supply platform</strong> connecting verified medicine donors
+            and recipients. Engineered normalized <strong>MongoDB</strong> schemas, stateless <strong>JWT authentication</strong>,
+            role-based access control, <strong>Cloudinary</strong> image pipelines, and <strong>Google Gemini</strong>-assisted
+            medicine discovery. Responsive <strong>React.js &amp; Tailwind CSS</strong> UI engineered to support
+            <strong>1,000+ daily users</strong> across mobile and desktop devices.
           </p>
 
-
-          <div class="project-tech tags">
-
-            <span class="tag">Java</span>
-
-            <span class="tag">JavaFX</span>
-
-            <span class="tag">JDBC</span>
-
-            <span class="tag">MySQL</span>
-
-            <span class="tag">Apache POI</span>
-
+          <div class="kpi-row">
+            <span class="kpi-chip"><strong>1,000+</strong> Est. Daily Users</span>
+            <span class="kpi-chip"><strong>JWT + RBAC</strong> Role Security</span>
+            <span class="kpi-chip"><strong>Gemini AI</strong> Smart Discovery</span>
           </div>
 
+          <div class="tech-tags">
+            <span class="tech-tag">React.js</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">JWT</span>
+            <span class="tech-tag">Cloudinary</span>
+            <span class="tech-tag">Google Gemini</span>
+          </div>
         </div>
 
-
-        <div class="project-links mono">
-
-          <a
-            href="https://github.com/raghav12344/EstateSync"
-            target="_blank"
-          >
-
-            <i class="fa-brands fa-github"></i>
-
-            source-code
-
-          </a>
-
+        <div class="proj-footer">
+          <div class="proj-links">
+            <a href="https://github.com/raghav12344/medicare-frontend" target="_blank" class="link-chip primary-chip">
+              <i class="fa-brands fa-github"></i> Frontend Repo
+            </a>
+            <a href="https://github.com/raghav12344/medicare-server" target="_blank" class="link-chip">
+              <i class="fa-brands fa-github"></i> Backend Repo
+            </a>
+          </div>
+          <button type="button" class="link-chip" onclick="openSpecModal('medicose')">
+            <i class="fa-solid fa-diagram-project"></i> Architecture Specs
+          </button>
         </div>
-
       </article>
 
-
-
-      <!-- MEDICOSE -->
-
-      <article
-        class="project-card reveal"
-        data-category="web"
-      >
-
+      <!-- 6. Machine Learning & Deep Learning Suite -->
+      <article class="surface-card proj-card project-item reveal" data-category="ai">
         <div>
-
-          <div class="project-top">
-
+          <div class="proj-head">
             <div>
-
-              <h3>
-                Medicose
-              </h3>
-
+              <h3 class="proj-title">Machine Learning &amp; Deep Learning Suite</h3>
+              <div class="proj-meta">
+                <span>2026</span>
+                <span class="badge-pill blue">9 Neural &amp; Classical Models</span>
+              </div>
             </div>
-
-            <div class="project-icon">
-
-              <i class="fa-solid fa-notes-medical"></i>
-
-            </div>
-
+            <div class="proj-icon"><i class="fa-solid fa-network-wired"></i></div>
           </div>
 
-
-          <p>
-
-            MERN-stack platform connecting donors and recipients
-            for medical supplies with JWT authentication,
-            search and filtering, Cloudinary media management
-            and Gemini-powered assistance.
-
+          <p class="proj-desc">
+            End-to-end benchmarking repository spanning 5 machine learning and deep learning domains:
+            <strong>Tabular Regression</strong> (SGD, MLP, Dense NN), <strong>Multiclass Classification</strong>
+            (One-Hot Encoding, Logistic Regression, MLP), <strong>Computer Vision</strong> (CNN &amp; Multinomial
+            Logistic Regression on <strong>~7,000 images across 150 Pokémon classes</strong>),
+            <strong>Time-Series Forecasting</strong> (Vanilla RNN), and <strong>Financial Sentiment Analysis</strong> (LSTM).
           </p>
 
-
-          <div class="project-tech tags">
-
-            <span class="tag">React</span>
-
-            <span class="tag">Node.js</span>
-
-            <span class="tag">Express</span>
-
-            <span class="tag">MongoDB</span>
-
-            <span class="tag">JWT</span>
-
-            <span class="tag">Gemini</span>
-
+          <div class="kpi-row">
+            <span class="kpi-chip"><strong>~7,000 Images</strong> 150-Class Vision CNN</span>
+            <span class="kpi-chip"><strong>5 Domains</strong> Vision, NLP, Time-Series, Tabular</span>
           </div>
 
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">TensorFlow &amp; Keras</span>
+            <span class="tech-tag">Scikit-Learn</span>
+            <span class="tech-tag">CNN</span>
+            <span class="tech-tag">Vanilla RNN</span>
+            <span class="tech-tag">LSTM</span>
+            <span class="tech-tag">NumPy &amp; Pandas</span>
+          </div>
         </div>
 
-
-        <div class="project-links mono">
-
-          <a
-            href="https://github.com/raghav12344/medicare-frontend"
-            target="_blank"
-          >
-
-            <i class="fa-brands fa-github"></i>
-
-            frontend
-
-          </a>
-
-
-          <a
-            href="https://github.com/raghav12344/medicare-server"
-            target="_blank"
-          >
-
-            <i class="fa-brands fa-github"></i>
-
-            backend
-
-          </a>
-
+        <div class="proj-footer">
+          <div class="proj-links">
+            <a href="https://github.com/raghav12344/ml-models" target="_blank" class="link-chip primary-chip">
+              <i class="fa-brands fa-github"></i> Source Code
+            </a>
+          </div>
+          <button type="button" class="link-chip" onclick="openSpecModal('mlsuite')">
+            <i class="fa-solid fa-diagram-project"></i> Architecture Specs
+          </button>
         </div>
-
       </article>
 
-
-
-      <!-- SPORTIZE -->
-
-      <article
-        class="project-card reveal"
-        data-category="web"
-      >
-
+      <!-- 7. Sportize -->
+      <article class="surface-card proj-card project-item reveal" data-category="web">
         <div>
-
-          <div class="project-top">
-
+          <div class="proj-head">
             <div>
-
-              <h3>
-                Sportize
-              </h3>
-
+              <h3 class="proj-title">Sportize</h3>
+              <div class="proj-meta">
+                <span>Nov 2024 – Present</span>
+                <span class="badge-pill emerald">60% Faster API Retrieval</span>
+              </div>
             </div>
-
-            <div class="project-icon">
-
-              <i class="fa-solid fa-trophy"></i>
-
-            </div>
-
+            <div class="proj-icon"><i class="fa-solid fa-trophy"></i></div>
           </div>
 
-
-          <p>
-
-            Full-stack sports event management platform with
-            REST APIs, authentication, role-based access
-            control, event filtering and MySQL integration.
-
+          <p class="proj-desc">
+            Cloud-backed sports tournament and event management platform enabling organizers and athletes to
+            publish, filter, and manage competitive events. Engineered RESTful APIs with <strong>Node.js &amp;
+            Express.js</strong>, role-based access control, multi-criteria filtering, <strong>Cloudinary</strong>
+            media storage, and <strong>Aiven Cloud MySQL</strong> over SSL—cutting API data retrieval latency by <strong>60%</strong>.
           </p>
 
-
-          <div class="project-tech tags">
-
-            <span class="tag">Node.js</span>
-
-            <span class="tag">Express</span>
-
-            <span class="tag">AngularJS</span>
-
-            <span class="tag">MySQL</span>
-
-            <span class="tag">Cloudinary</span>
-
+          <div class="kpi-row">
+            <span class="kpi-chip"><strong>60% Faster</strong> REST Query Latency</span>
+            <span class="kpi-chip"><strong>Aiven Cloud</strong> Managed SSL MySQL</span>
           </div>
 
+          <div class="tech-tags">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">AngularJS</span>
+            <span class="tech-tag">Bootstrap</span>
+            <span class="tech-tag">MySQL (Aiven Cloud)</span>
+            <span class="tech-tag">Cloudinary</span>
+          </div>
         </div>
 
-
-        <div class="project-links mono">
-
-          <a
-            href="https://github.com/raghav12344/project"
-            target="_blank"
-          >
-
-            <i class="fa-brands fa-github"></i>
-
-            source-code
-
-          </a>
-
+        <div class="proj-footer">
+          <div class="proj-links">
+            <a href="https://github.com/raghav12344/project" target="_blank" class="link-chip primary-chip">
+              <i class="fa-brands fa-github"></i> Source Code
+            </a>
+          </div>
+          <button type="button" class="link-chip" onclick="openSpecModal('sportize')">
+            <i class="fa-solid fa-diagram-project"></i> Architecture Specs
+          </button>
         </div>
-
       </article>
 
+      <!-- 8. Data Structures & Algorithms (C++) -->
+      <article class="surface-card proj-card project-item reveal" data-category="dsa">
+        <div>
+          <div class="proj-head">
+            <div>
+              <h3 class="proj-title">Data Structures &amp; Algorithms Archive (C++)</h3>
+              <div class="proj-meta">
+                <span>2024 – Present</span>
+                <span class="badge-pill blue">260+ C++ Solutions · 400+ Total Solved</span>
+              </div>
+            </div>
+            <div class="proj-icon"><i class="fa-solid fa-terminal"></i></div>
+          </div>
+
+          <p class="proj-desc">
+            Structured repository of <strong>260+ optimized C++ algorithmic implementations</strong> with problem
+            statements (out of <strong>400+ total problems solved</strong> across LeetCode, Codeforces, GeeksforGeeks,
+            and Naukri Code360). Covers Dynamic Programming, Graph Theory (BFS/DFS/Dijkstra/MST), Trees, Tries,
+            Heaps, Segment/Binary Search paradigms, Backtracking, and Sliding Window optimizations.
+          </p>
+
+          <div class="kpi-row">
+            <span class="kpi-chip"><strong>400+</strong> Total Problems Solved</span>
+            <span class="kpi-chip"><strong>260+</strong> Synced C++ Implementations</span>
+          </div>
+
+          <div class="tech-tags">
+            <span class="tech-tag">C++ (STL)</span>
+            <span class="tech-tag">Dynamic Programming</span>
+            <span class="tech-tag">Graphs &amp; Trees</span>
+            <span class="tech-tag">Backtracking &amp; Greedy</span>
+            <span class="tech-tag">Sliding Window &amp; Heaps</span>
+          </div>
+        </div>
+
+        <div class="proj-footer">
+          <div class="proj-links">
+            <a href="https://github.com/raghav12344/dsa" target="_blank" class="link-chip">
+              <i class="fa-brands fa-github"></i> GitHub Repo
+            </a>
+            <a href="https://leetcode.com/u/raghav_012006/" target="_blank" class="link-chip primary-chip">
+              <i class="fa-solid fa-code"></i> LeetCode (@raghav_012006)
+            </a>
+          </div>
+          <button type="button" class="link-chip" onclick="openSpecModal('dsa')">
+            <i class="fa-solid fa-diagram-project"></i> Topic Breakdown
+          </button>
+        </div>
+      </article>
 
     </div>
-
   </div>
-
 </section>
 
 
-
-<!-- =========================================================
-     AREAS OF INTEREST
-========================================================= -->
-
-<section>
-
+<!-- ==========================================================================
+     03 / PRODUCTION TECHNICAL STACK
+========================================================================== -->
+<section id="skills">
   <div class="container">
-
-    <div class="section-label mono">
-
-      focus/
-
-    </div>
-
-    <h2 class="section-title">
-
-      What I Work With
-
-    </h2>
-
-
-    <div class="focus-grid">
-
-
-      <div class="focus-card reveal">
-
-        <i class="fa-solid fa-microchip"></i>
-
-        <h3>Machine Learning</h3>
-
-        <p>
-          Regression, classification,
-          model evaluation and preprocessing.
-        </p>
-
-      </div>
-
-
-      <div class="focus-card reveal">
-
-        <i class="fa-solid fa-network-wired"></i>
-
-        <h3>Deep Learning</h3>
-
-        <p>
-          MLPs, CNNs, RNNs, LSTMs
-          and sequential models.
-        </p>
-
-      </div>
-
-
-      <div class="focus-card reveal">
-
-        <i class="fa-solid fa-robot"></i>
-
-        <h3>Generative AI</h3>
-
-        <p>
-          RAG, embeddings, vector search,
-          LLM applications and agents.
-        </p>
-
-      </div>
-
-
-      <div class="focus-card reveal">
-
-        <i class="fa-solid fa-server"></i>
-
-        <h3>Software Engineering</h3>
-
-        <p>
-          Backend systems, REST APIs,
-          databases and full-stack applications.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     EDUCATION
-========================================================= -->
-
-<section id="education">
-
-  <div class="container">
-
-    <div class="section-label mono">
-
-      education.log
-
-    </div>
-
-    <h2 class="section-title">
-
-      Education
-
-    </h2>
-
-
-    <div class="education-card reveal">
-
-
+    <div class="sec-head reveal">
       <div>
-
-        <h3>
-
-          Motilal Nehru National Institute
-          of Technology Allahabad
-
-        </h3>
-
-
-        <div class="degree">
-
-          B.Tech — Computer Science & Engineering
-
-        </div>
-
-
-        <p>
-
-          Coursework includes Data Structures &
-          Algorithms, Object-Oriented Programming,
-          DBMS, Operating Systems, Computer Networks,
-          Machine Learning and Deep Learning.
-
-        </p>
-
+        <div class="sec-eyebrow">03 / Technical Capabilities</div>
+        <h2 class="sec-title">Production Technical Stack</h2>
       </div>
-
-
-      <div class="education-date">
-
-        2024 — 2028
-
-      </div>
-
-
+      <p class="sec-desc">
+        Verified across shipped repositories, containerized microservices, and Computer Science coursework at MNNIT Allahabad.
+      </p>
     </div>
 
-  </div>
+    <div class="skills-matrix">
+      <div class="surface-card skill-group reveal">
+        <div class="skill-header">
+          <div class="skill-box-icon"><i class="fa-solid fa-code"></i></div>
+          <div>
+            <h3>Programming Languages</h3>
+            <div class="sub">Systems, OOP &amp; Scripting</div>
+          </div>
+        </div>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">C++ (STL)</span>
+          <span class="tech-tag">Java (JDK 22)</span>
+          <span class="tech-tag">JavaScript (ES6+)</span>
+          <span class="tech-tag">C</span>
+          <span class="tech-tag">SQL</span>
+          <span class="tech-tag">HTML5 &amp; CSS3</span>
+        </div>
+      </div>
 
+      <div class="surface-card skill-group reveal">
+        <div class="skill-header">
+          <div class="skill-box-icon"><i class="fa-solid fa-robot"></i></div>
+          <div>
+            <h3>GenAI, RAG &amp; Agentic Systems</h3>
+            <div class="sub">Multi-Agent MCP &amp; Vector Retrieval</div>
+          </div>
+        </div>
+        <div class="tech-tags">
+          <span class="tech-tag">LangChain</span>
+          <span class="tech-tag">CrewAI (Hierarchical Agents)</span>
+          <span class="tech-tag">Model Context Protocol (MCP)</span>
+          <span class="tech-tag">RAG Pipelines</span>
+          <span class="tech-tag">HuggingFace Embeddings</span>
+          <span class="tech-tag">Google Gemini API</span>
+          <span class="tech-tag">Groq (Llama 3.3 70B)</span>
+          <span class="tech-tag">Tavily Search API</span>
+        </div>
+      </div>
+
+      <div class="surface-card skill-group reveal">
+        <div class="skill-header">
+          <div class="skill-box-icon"><i class="fa-solid fa-brain"></i></div>
+          <div>
+            <h3>Machine Learning &amp; Deep Learning</h3>
+            <div class="sub">Tabular, Vision, NLP &amp; Sequential</div>
+          </div>
+        </div>
+        <div class="tech-tags">
+          <span class="tech-tag">LightGBM</span>
+          <span class="tech-tag">Scikit-Learn</span>
+          <span class="tech-tag">TensorFlow &amp; Keras</span>
+          <span class="tech-tag">PyTorch</span>
+          <span class="tech-tag">CNN (Computer Vision)</span>
+          <span class="tech-tag">Vanilla RNN &amp; LSTM</span>
+          <span class="tech-tag">NumPy &amp; Pandas</span>
+          <span class="tech-tag">Plotly &amp; Matplotlib</span>
+        </div>
+      </div>
+
+      <div class="surface-card skill-group reveal">
+        <div class="skill-header">
+          <div class="skill-box-icon"><i class="fa-solid fa-globe"></i></div>
+          <div>
+            <h3>Backend, Web &amp; Desktop</h3>
+            <div class="sub">Microservices &amp; Full-Stack UI</div>
+          </div>
+        </div>
+        <div class="tech-tags">
+          <span class="tech-tag">React 19 (Vite)</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Express.js 5</span>
+          <span class="tech-tag">FastAPI (Uvicorn)</span>
+          <span class="tech-tag">Streamlit</span>
+          <span class="tech-tag">JavaFX (MVC)</span>
+          <span class="tech-tag">Tailwind CSS &amp; Bootstrap</span>
+          <span class="tech-tag">AngularJS</span>
+          <span class="tech-tag">JWT RBAC &amp; REST APIs</span>
+        </div>
+      </div>
+
+      <div class="surface-card skill-group reveal">
+        <div class="skill-header">
+          <div class="skill-box-icon"><i class="fa-solid fa-database"></i></div>
+          <div>
+            <h3>Databases, Caching &amp; Queues</h3>
+            <div class="sub">ACID Ledgers, Vector &amp; In-Memory</div>
+          </div>
+        </div>
+        <div class="tech-tags">
+          <span class="tech-tag">MySQL 8 (BCNF / Stored Procs)</span>
+          <span class="tech-tag">Redis 7 (ZSET Rate Limit &amp; TTL)</span>
+          <span class="tech-tag">RabbitMQ (amqplib / aio-pika)</span>
+          <span class="tech-tag">ChromaDB (Vector Store)</span>
+          <span class="tech-tag">MongoDB (Mongoose)</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">JDBC (Transactions / BLOB)</span>
+        </div>
+      </div>
+
+      <div class="surface-card skill-group reveal">
+        <div class="skill-header">
+          <div class="skill-box-icon"><i class="fa-solid fa-cloud"></i></div>
+          <div>
+            <h3>DevOps, Cloud &amp; Tooling</h3>
+            <div class="sub">Containers, CI/CD &amp; Reporting</div>
+          </div>
+        </div>
+        <div class="tech-tags">
+          <span class="tech-tag">Docker &amp; Docker Compose</span>
+          <span class="tech-tag">GitHub Actions (CI/CD)</span>
+          <span class="tech-tag">Git &amp; GitHub</span>
+          <span class="tech-tag">Vercel · Render · Netlify</span>
+          <span class="tech-tag">Aiven Cloud &amp; CloudAMQP</span>
+          <span class="tech-tag">Cloudinary</span>
+          <span class="tech-tag">Apache POI &amp; iText</span>
+          <span class="tech-tag">Linux · Postman · IntelliJ</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
-
-<!-- =========================================================
-     CONTACT
-========================================================= -->
-
-<section id="contact">
-
+<!-- ==========================================================================
+     04 / HONORS, JEE STANDINGS & COMPETITIVE PROGRAMMING PROFILES
+========================================================================== -->
+<section id="achievements">
   <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <div class="sec-eyebrow">04 / Honors &amp; Competitive Standings</div>
+        <h2 class="sec-title">Academic Distinction &amp; Coding Profiles</h2>
+      </div>
+      <p class="sec-desc">
+        National engineering entrance examination ranks and algorithmic problem-solving profiles.
+      </p>
+    </div>
 
-    <div class="contact-box reveal">
-
-
-      <div class="section-label mono">
-
-        contact.sh
-
+    <div class="honors-grid">
+      <div class="surface-card honor-card reveal">
+        <div class="honor-top">
+          <span class="honor-metric">99.83%ile</span>
+          <span class="badge-pill emerald">Top 0.17% Nationwide</span>
+        </div>
+        <h3>JEE Main 2024</h3>
+        <p>
+          Achieved <strong>99.83 Percentile</strong> nationwide among approximately
+          <strong>1.4 million candidates</strong> in Joint Entrance Examination (Main) 2024.
+        </p>
       </div>
 
+      <div class="surface-card honor-card reveal">
+        <div class="honor-top">
+          <span class="honor-metric">AIR 7406</span>
+          <span class="badge-pill blue">JEE Advanced 2024</span>
+        </div>
+        <h3>All India Rank 7406</h3>
+        <p>
+          Secured <strong>All India Rank 7406</strong> in JEE Advanced 2024, earning admission to
+          B.Tech Computer Science &amp; Engineering at <strong>MNNIT Allahabad</strong>.
+        </p>
+      </div>
 
-      <h2>
+      <div class="surface-card honor-card reveal">
+        <div class="honor-top">
+          <span class="honor-metric">400+ Solved</span>
+          <span class="badge-pill">260+ C++ Repo Solutions</span>
+        </div>
+        <h3>Algorithmic Problem Solving</h3>
+        <p>
+          Solved <strong>400+ Data Structures &amp; Algorithms problems</strong> across LeetCode,
+          Codeforces, GeeksforGeeks, and Naukri Code360.
+        </p>
+      </div>
+    </div>
 
-        Let's Build Something
+    <div class="cp-grid">
+      <a href="https://leetcode.com/u/raghav_012006/" target="_blank" class="surface-card cp-card reveal">
+        <div>
+          <h4>LeetCode</h4>
+          <span>@raghav_012006 · 400+ Solved</span>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square" style="color:var(--text-muted);"></i>
+      </a>
 
-        <span class="gradient-text">
-          Great.
-        </span>
+      <a href="https://codeforces.com/profile/raghav1233" target="_blank" class="surface-card cp-card reveal">
+        <div>
+          <h4>Codeforces</h4>
+          <span>@raghav1233 · Competitive CP</span>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square" style="color:var(--text-muted);"></i>
+      </a>
 
-      </h2>
+      <a href="https://www.naukri.com/code360/profile/itzraghav" target="_blank" class="surface-card cp-card reveal">
+        <div>
+          <h4>Naukri Code360</h4>
+          <span>@itzraghav · DSA Profile</span>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square" style="color:var(--text-muted);"></i>
+      </a>
+
+      <a href="https://www.geeksforgeeks.org/user/graghaxqy7/" target="_blank" class="surface-card cp-card reveal">
+        <div>
+          <h4>GeeksforGeeks</h4>
+          <span>@graghaxqy7 · Algorithms</span>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square" style="color:var(--text-muted);"></i>
+      </a>
+    </div>
+  </div>
+</section>
 
 
+<!-- ==========================================================================
+     05 / EDUCATION
+========================================================================== -->
+<section id="education">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <div class="sec-eyebrow">05 / Academic Credentials</div>
+        <h2 class="sec-title">Education</h2>
+      </div>
+    </div>
+
+    <div class="edu-stack">
+      <div class="surface-card edu-item reveal">
+        <div>
+          <h3>Motilal Nehru National Institute of Technology (MNNIT) Allahabad</h3>
+          <div class="edu-degree">Bachelor of Technology in Computer Science &amp; Engineering · Prayagraj, Uttar Pradesh</div>
+          <p>
+            <strong>Coursework:</strong> Data Structures &amp; Algorithms, Object-Oriented Programming,
+            Database Management Systems (DBMS), Operating Systems, Computer Networks, Machine Learning,
+            Deep Learning, Web Development.
+          </p>
+        </div>
+        <div class="edu-meta">
+          <span class="edu-date">Aug 2024 — May 2028</span>
+          <span class="edu-grade">CPI: 7.69</span>
+        </div>
+      </div>
+
+      <div class="surface-card edu-item reveal">
+        <div>
+          <h3>D M G Public School, Sadiq</h3>
+          <div class="edu-degree">Class XII (Senior Secondary · C.B.S.E) · Faridkot, Punjab</div>
+          <p>Physics, Chemistry, and Mathematics.</p>
+        </div>
+        <div class="edu-meta">
+          <span class="edu-date">Aug 2023 — Apr 2024</span>
+          <span class="edu-grade">Percentage: 87.8%</span>
+        </div>
+      </div>
+
+      <div class="surface-card edu-item reveal">
+        <div>
+          <h3>Dashmesh Public School</h3>
+          <div class="edu-degree">Class X (Secondary · C.B.S.E) · Faridkot, Punjab</div>
+          <p>Secondary School Certificate with distinction across core subjects.</p>
+        </div>
+        <div class="edu-meta">
+          <span class="edu-date">Aug 2021 — Apr 2022</span>
+          <span class="edu-grade">Percentage: 95.0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================================
+     06 / CONTACT & DUAL RESUME HUB
+========================================================================== -->
+<section id="contact">
+  <div class="container">
+    <div class="surface-card contact-panel reveal">
+      <div class="sec-eyebrow" style="justify-content:center;">06 / Initiate Conversation</div>
+      <h2>Let’s Build Production Systems Together</h2>
       <p>
-
-        I'm interested in Software Engineering,
-        Machine Learning, AI/ML and Full-Stack
-        opportunities. If you're working on an
-        interesting problem, I'd love to connect.
-
+        Actively seeking <strong>Software Engineering, Backend / Distributed Systems, and AI/ML</strong>
+        internships and full-time opportunities. Reach out directly via email or inspect my resumes below.
       </p>
 
-
-      <div class="contact-buttons">
-
-
-        <a
-          href="mailto:graghav1233@gmail.com"
-          class="btn btn-primary"
-        >
-
-          <i class="fa-solid fa-envelope"></i>
-
-          Email Me
-
+      <div class="contact-actions">
+        <a href="mailto:graghav1233@gmail.com" class="btn btn-primary">
+          <i class="fa-regular fa-envelope"></i>
+          graghav1233@gmail.com
         </a>
 
+        <button type="button" class="btn btn-secondary" onclick="copyEmail()">
+          <i class="fa-regular fa-copy"></i>
+          Copy Email
+        </button>
 
-        <a
-          href="https://linkedin.com/in/raghav-gupta1233"
-          target="_blank"
-          class="btn btn-outline"
-        >
+        <a href="offcampus_resume.pdf" target="_blank" class="btn btn-secondary">
+          <i class="fa-regular fa-file-pdf"></i>
+          Off-Campus Resume (PDF)
+        </a>
 
-          <i class="fa-brands fa-linkedin"></i>
+        <a href="RaghavGupta_20243226_campusResume.pdf" target="_blank" class="btn btn-secondary">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          Campus Resume (PDF)
+        </a>
 
+        <a href="https://linkedin.com/in/raghav-gupta1233" target="_blank" class="btn btn-secondary">
+          <i class="fa-brands fa-linkedin-in"></i>
           LinkedIn
-
         </a>
 
-
-        <a
-          href="https://github.com/raghav12344"
-          target="_blank"
-          class="btn btn-outline"
-        >
-
+        <a href="https://github.com/raghav12344" target="_blank" class="btn btn-secondary">
           <i class="fa-brands fa-github"></i>
-
           GitHub
-
         </a>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
 
 </main>
 
 
+<!-- ==========================================================================
+     ENGINEERING ARCHITECTURE SPEC MODAL
+========================================================================== -->
+<div class="modal-backdrop" id="spec-backdrop" onclick="if(event.target===this) closeSpecModal()">
+  <div class="spec-modal">
+    <div class="spec-modal-top">
+      <div>
+        <div class="sec-eyebrow" id="spec-eyebrow">SYSTEM SPECIFICATION</div>
+        <h3 id="spec-title">Project Architecture</h3>
+      </div>
+      <button class="icon-btn" onclick="closeSpecModal()" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div id="spec-content"></div>
+  </div>
+</div>
 
-<!-- =========================================================
+
+<!-- ==========================================================================
+     COMMAND PALETTE (Ctrl+K / ⌘K)
+========================================================================== -->
+<div class="modal-backdrop" id="cmd-backdrop" onclick="if(event.target===this) closeCmdPalette()">
+  <div class="cmd-modal">
+    <div class="cmd-header">
+      <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted);"></i>
+      <input
+        type="text"
+        id="cmd-input"
+        class="cmd-input"
+        placeholder="Search projects, jump to sections, open resumes, or switch theme..."
+        oninput="filterCmd(this.value)"
+      >
+      <span class="kbd-pill" onclick="closeCmdPalette()" style="cursor:pointer;">ESC</span>
+    </div>
+    <div class="cmd-list" id="cmd-list">
+      <div class="cmd-row" onclick="runCmdAction('#projects')">
+        <div class="cmd-row-left"><i class="fa-solid fa-cubes"></i><span>Explore All 8 Featured Engineering Projects</span></div>
+        <span class="kbd-pill">Section</span>
+      </div>
+      <div class="cmd-row" onclick="runCmdAction('https://trust-pay-chi.vercel.app', true)">
+        <div class="cmd-row-left"><i class="fa-solid fa-bolt"></i><span>Launch TrustPay Live Production App (Vercel)</span></div>
+        <span class="kbd-pill">Live Demo</span>
+      </div>
+      <div class="cmd-row" onclick="runCmdAction('https://github.com/raghav12344/TrustPay/blob/main/TRUSTPAY_PROJECT_REPORT.pdf', true)">
+        <div class="cmd-row-left"><i class="fa-regular fa-file-pdf"></i><span>Read TrustPay 20-Page Engineering Report (PDF)</span></div>
+        <span class="kbd-pill">Report</span>
+      </div>
+      <div class="cmd-row" onclick="runCmdAction('offcampus_resume.pdf', true)">
+        <div class="cmd-row-left"><i class="fa-regular fa-file-lines"></i><span>Open Off-Campus Resume (AI/ML &amp; SWE)</span></div>
+        <span class="kbd-pill">Resume</span>
+      </div>
+      <div class="cmd-row" onclick="runCmdAction('RaghavGupta_20243226_campusResume.pdf', true)">
+        <div class="cmd-row-left"><i class="fa-solid fa-graduation-cap"></i><span>Open On-Campus MNNIT Allahabad Resume</span></div>
+        <span class="kbd-pill">Resume</span>
+      </div>
+      <div class="cmd-row" onclick="copyEmail(); closeCmdPalette();">
+        <div class="cmd-row-left"><i class="fa-regular fa-copy"></i><span>Copy Email Address (graghav1233@gmail.com)</span></div>
+        <span class="kbd-pill">Action</span>
+      </div>
+      <div class="cmd-row" onclick="toggleTheme(); closeCmdPalette();">
+        <div class="cmd-row-left"><i class="fa-solid fa-circle-half-stroke"></i><span>Switch Dark / Daylight Theme</span></div>
+        <span class="kbd-pill">Theme</span>
+      </div>
+      <div class="cmd-row" onclick="runCmdAction('#skills')">
+        <div class="cmd-row-left"><i class="fa-solid fa-microchip"></i><span>View Production Technical Stack</span></div>
+        <span class="kbd-pill">Section</span>
+      </div>
+      <div class="cmd-row" onclick="runCmdAction('#achievements')">
+        <div class="cmd-row-left"><i class="fa-solid fa-award"></i><span>View JEE Ranks (99.83%ile / AIR 7406) &amp; Coding Profiles</span></div>
+        <span class="kbd-pill">Section</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <i class="fa-solid fa-circle-check"></i>
+  <span id="toast-text">Copied graghav1233@gmail.com to clipboard!</span>
+</div>
+
+<!-- ==========================================================================
      FOOTER
-========================================================= -->
-
-<footer class="mono">
-
-  <p>
-
-    console.log(
-    "© 2026 Raghav Gupta — Built with HTML, CSS & JavaScript"
-    );
-
-  </p>
-
+========================================================================== -->
+<footer>
+  <div class="container footer-flex">
+    <div>
+      © 2026 Raghav Gupta · B.Tech Computer Science &amp; Engineering, MNNIT Allahabad
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/raghav12344" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/raghav-gupta1233" target="_blank">LinkedIn</a>
+      <a href="https://leetcode.com/u/raghav_012006/" target="_blank">LeetCode</a>
+      <a href="https://codeforces.com/profile/raghav1233" target="_blank">Codeforces</a>
+      <a href="mailto:graghav1233@gmail.com">Email</a>
+    </div>
+  </div>
 </footer>
 
 
-
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
-
+<!-- ==========================================================================
+     INTERACTIVE SCRIPTS
+========================================================================== -->
 <script>
+  /* 1. Theme Persistence & Toggle (Hybrid Daylight Default) */
+  const savedTheme = localStorage.getItem("rg-theme-v2") || "light";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+  syncThemeIcon(savedTheme);
 
+  function toggleTheme() {
+    const curr = document.documentElement.getAttribute("data-theme") || "light";
+    const next = curr === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("rg-theme-v2", next);
+    syncThemeIcon(next);
+  }
 
-/* =========================================================
-   PROJECT FILTER
-========================================================= */
+  function syncThemeIcon(theme) {
+    const icon = document.getElementById("theme-icon");
+    if (icon) icon.className = theme === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
+  }
 
-function filterProjects(event, category) {
+  /* 2. Scroll Progress & Active Nav Link */
+  const progressBar = document.getElementById("scroll-progress");
+  const sections = document.querySelectorAll("section[id]");
+  const navAnchors = document.querySelectorAll(".nav-links a");
 
-  const cards =
-    document.querySelectorAll(".project-card");
+  window.addEventListener("scroll", () => {
+    const top = window.scrollY;
+    const height = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = `${height > 0 ? (top / height) * 100 : 0}%`;
 
-  const buttons =
-    document.querySelectorAll(".filter-btn");
-
-
-  buttons.forEach(button => {
-
-    button.classList.remove("active");
-
+    let activeId = "";
+    sections.forEach(sec => {
+      if (top >= sec.offsetTop - 150) activeId = sec.id;
+    });
+    navAnchors.forEach(a => {
+      a.classList.toggle("active", a.getAttribute("href") === `#${activeId}`);
+    });
   });
 
-
-  event.currentTarget.classList.add("active");
-
-
-  cards.forEach(card => {
-
-    const matches =
-      category === "all" ||
-      card.dataset.category === category;
-
-
-    if (matches) {
-
-      card.style.display = "flex";
-
-      setTimeout(() => {
-
-        card.style.opacity = "1";
-
-      }, 10);
-
-    }
-
-    else {
-
-      card.style.display = "none";
-
-      card.style.opacity = "0";
-
-    }
-
+  /* 3. Specular Mouse Tracking on Surface Cards */
+  document.querySelectorAll(".surface-card").forEach(card => {
+    card.addEventListener("mousemove", e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty("--mouse-x", `${e.clientX - r.left}px`);
+      card.style.setProperty("--mouse-y", `${e.clientY - r.top}px`);
+    });
   });
 
-}
+  /* 4. Hero IDE Tabs & Interactive CLI */
+  function switchIdeTab(e, id) {
+    document.querySelectorAll(".ide-tab").forEach(t => t.classList.remove("active"));
+    document.querySelectorAll(".ide-pane").forEach(p => p.classList.remove("active"));
+    e.currentTarget.classList.add("active");
+    document.getElementById(id).classList.add("active");
+    if (id === "ide-shell") document.getElementById("cli-input").focus();
+  }
 
+  const cliDict = {
+    help: "Commands: <span class='syn-fn'>trustpay</span>, <span class='syn-fn'>agents</span>, <span class='syn-fn'>ranks</span>, <span class='syn-fn'>contact</span>, <span class='syn-fn'>clear</span>",
+    trustpay: "<span class='syn-ok'>[TrustPay]</span> 6-Container Banking & Fraud Engine · LightGBM (99.98% acc, 100% precision, 2.35ms) + Groq Llama 3.3 70B + RabbitMQ + Redis 7 + MySQL 8.",
+    agents: "<span class='syn-ok'>[GenAI/MCP]</span> AI Fitness Coach (CrewAI Manager/Researcher/Coach + MCP Tool Server) & SQL Learning Assistant (6,764-page ChromaDB RAG + Plotly).",
+    ranks: "<span class='syn-num'>JEE Main 2024:</span> 99.83 Percentile (~1.4M candidates) | <span class='syn-num'>JEE Adv 2024:</span> AIR 7406 | <span class='syn-num'>DSA:</span> 400+ Solved.",
+    contact: "Email: <span class='syn-str'>graghav1233@gmail.com</span> | Phone: <span class='syn-str'>+91-9878337737</span> | LinkedIn: <span class='syn-str'>linkedin.com/in/raghav-gupta1233</span>"
+  };
 
+  function runCli(raw) {
+    const cmd = raw.trim().toLowerCase();
+    const log = document.getElementById("cli-log");
+    if (!cmd) return;
+    if (cmd === "clear") {
+      log.innerHTML = "";
+      return;
+    }
+    const res = cliDict[cmd] || `Unknown command: ${cmd}. Type <span class='syn-fn'>help</span>.`;
+    log.innerHTML += `<div><span class="cli-prompt">raghav@mnnit:~$</span> ${cmd}</div><div>${res}</div>`;
+    const body = log.closest(".ide-body");
+    body.scrollTop = body.scrollHeight;
+  }
 
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
+  /* 5. Interactive TrustPay 6-Tier Pipeline Simulator */
+  function simulateTrustPay(mode) {
+    const btnLegit = document.getElementById("btn-sim-legit");
+    const btnFraud = document.getElementById("btn-sim-fraud");
+    const btnRate = document.getElementById("btn-sim-rate");
+    btnLegit.className = "sim-btn" + (mode === "legit" ? " active-legit" : "");
+    btnFraud.className = "sim-btn" + (mode === "fraud" ? " active-fraud" : "");
+    btnRate.className = "sim-btn" + (mode === "rate" ? " active-rate" : "");
 
-const observer =
-  new IntersectionObserver(
+    const stages = [1, 2, 3, 4, 5, 6].map(i => document.getElementById(`st-${i}`));
+    const txts = [1, 2, 3, 4, 5, 6].map(i => document.getElementById(`st-${i}-txt`));
+    const tel = document.getElementById("sim-telemetry");
 
-    entries => {
+    if (mode === "legit") {
+      stages.forEach(s => s.className = "sim-stage lit-ok");
+      txts[0].textContent = "Captures HTML5 GPS coords & device UUID fingerprint.";
+      txts[1].textContent = "Window count: 1/5 req in 10s. Allowed (<1ms).";
+      txts[2].textContent = "JWT verified, logs PENDING row, returns 202 in 11ms.";
+      txts[3].textContent = "Persists payload to durable fraud_evaluation_queue.";
+      txts[4].textContent = "Risk score: 1.8/100 (2.35ms). Marked SAFE.";
+      txts[5].textContent = "FOR UPDATE lock commits debit/credit atomically.";
+      tel.innerHTML = `<span><strong style="color:#34d399;">[VERDICT: COMPLETED]</strong> LightGBM Risk: <strong>1.8%</strong> · Haversine Speed: <strong>0.0 km/h</strong> · Z-Score: <strong>0.41</strong></span><span>Gateway: <strong>11.4 ms (HTTP 202)</strong> | ML Inference: <strong>2.35 ms</strong></span>`;
+    } else if (mode === "fraud") {
+      stages[0].className = "sim-stage lit-ok";
+      stages[1].className = "sim-stage lit-ok";
+      stages[2].className = "sim-stage lit-ok";
+      stages[3].className = "sim-stage lit-ok";
+      stages[4].className = "sim-stage lit-block";
+      stages[5].className = "sim-stage lit-block";
+      txts[0].textContent = "Tx initiated from Tokyo IP 4 min after London login.";
+      txts[1].textContent = "Window count: 2/5 req in 10s. Passes rate guard.";
+      txts[2].textContent = "Logs PENDING tx, returns HTTP 202 Accepted in 12ms.";
+      txts[3].textContent = "Dispatches event to Python aio-pika consumer.";
+      txts[4].textContent = "Risk: 99.4/100! Haversine velocity 9,420 km/h + 88% drain.";
+      txts[5].textContent = "Balance untouched. Status -> FLAGGED + Llama 3.3 alert.";
+      tel.innerHTML = `<span><strong style="color:#f43f5e;">[VERDICT: BLOCKED_FRAUD]</strong> LightGBM Risk: <strong>99.4%</strong> · Haversine: <strong>9,420 km/h (Impossible Travel)</strong></span><span>Groq Llama 3.3 70B Forensic Dossier Generated</span>`;
+    } else if (mode === "rate") {
+      stages[0].className = "sim-stage lit-warn";
+      stages[1].className = "sim-stage lit-block";
+      stages[2].className = "sim-stage";
+      stages[3].className = "sim-stage";
+      stages[4].className = "sim-stage";
+      stages[5].className = "sim-stage";
+      txts[0].textContent = "Automated script fires 6th payment request within 8s.";
+      txts[1].textContent = "Redis ZCARD > 5 in 10s sliding window -> HTTP 429!";
+      txts[2].textContent = "Short-circuited before DB connection pool.";
+      txts[3].textContent = "Zero queue overhead (blocked at edge).";
+      txts[4].textContent = "Zero GPU/CPU inference wasted.";
+      txts[5].textContent = "MySQL ledger completely isolated from flood.";
+      tel.innerHTML = `<span><strong style="color:#f59e0b;">[VERDICT: HTTP 429 TOO MANY REQUESTS]</strong> Blocked at Redis 7 ZSET Sliding Window (6 req / 8s &gt; max 5/10s)</span><span>Edge Rejection Latency: <strong>0.85 ms</strong></span>`;
+    }
+  }
 
-      entries.forEach(entry => {
+  /* 6. Project Filtering */
+  function filterProjects(e, cat) {
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    e.currentTarget.classList.add("active");
+    document.querySelectorAll(".project-item").forEach(card => {
+      const cats = (card.dataset.category || "").split(" ");
+      const show = cat === "all" || cats.includes(cat);
+      card.style.display = show ? "" : "none";
+    });
+  }
 
-        if (entry.isIntersecting) {
-
-          entry.target.classList.add("visible");
-
-          observer.unobserve(entry.target);
-
-        }
-
-      });
-
+  /* 7. Deep-Dive Engineering Spec Modal */
+  const projectSpecs = {
+    trustpay: {
+      eyebrow: "DISTRIBUTED FINTECH & SENTINEL AI",
+      title: "TrustPay — 6-Service Architecture Specification",
+      html: `
+        <div class="spec-section">
+          <h4>1. Architectural Challenge</h4>
+          <p>Running a 20-feature gradient boosted classifier plus a 70B parameter LLM forensic analyst takes ~1.44 seconds—far too slow for synchronous HTTP banking endpoints under burst load.</p>
+        </div>
+        <div class="spec-section">
+          <h4>2. Event-Driven Solution</h4>
+          <ul>
+            <li><strong>Edge Protection (Redis 7 ZSET):</strong> Atomic sliding-window rate limiter (<code>ZREMRANGEBYSCORE</code> + <code>ZADD</code> + <code>ZCARD</code>) capping transfers at 5 requests per 10 seconds (<code>HTTP 429</code>).</li>
+            <li><strong>Non-Blocking Ingestion (Express 5 + RabbitMQ):</strong> Validates JWT &amp; sender balance, records a <code>PENDING</code> ledger row, publishes to durable <code>fraud_evaluation_queue</code>, and returns <code>HTTP 202 Accepted</code> in &lt;15ms.</li>
+            <li><strong>Hybrid AI Worker (FastAPI + LightGBM + Groq Llama 3.3 70B):</strong> Computes 20 real-time spatio-temporal features (Haversine impossible travel velocity, 10m burst count, Z-score anomaly, balance drain ratio). Achieves <strong>99.98% holdout accuracy (0.9991 ROC-AUC)</strong> and <strong>100% precision</strong> in 2.35ms.</li>
+            <li><strong>ACID Settlement (MySQL 8 BCNF):</strong> Executes stored procedures with <code>SELECT ... FOR UPDATE</code> pessimistic row locks to prevent race conditions and double-spending.</li>
+          </ul>
+        </div>
+      `
     },
-
-    {
-      threshold: 0.12
+    sqlrag: {
+      eyebrow: "RETRIEVAL-AUGMENTED GENERATION",
+      title: "SQL Learning Assistant — RAG & Plotly Pipeline",
+      html: `
+        <div class="spec-section">
+          <h4>1. Corpus & Vector Indexing</h4>
+          <p>Ingests <strong>6,764 pages</strong> of official MySQL technical documentation PDFs via PyMuPDF, chunked recursively and embedded with HuggingFace sentence transformers into a persistent <strong>ChromaDB</strong> vector store.</p>
+        </div>
+        <div class="spec-section">
+          <h4>2. Dual Prompt Chain & Dynamic Chart Synthesis</h4>
+          <ul>
+            <li>Context-bounded retrieval chain ensures Google Gemini answers strictly from retrieved SQL documentation with automated fallback handling.</li>
+            <li>Structured JSON extraction pipeline parses natural-language analytical queries into validated Plotly chart specifications (Bar, Line, Pie, Scatter, Histogram) rendered live in Streamlit.</li>
+          </ul>
+        </div>
+      `
+    },
+    fitness: {
+      eyebrow: "AGENTIC AI & MODEL CONTEXT PROTOCOL",
+      title: "AI Fitness Coach — CrewAI + MCP Server",
+      html: `
+        <div class="spec-section">
+          <h4>1. Hierarchical Multi-Agent Orchestration</h4>
+          <p>Built a 3-agent <strong>CrewAI</strong> hierarchy where a Manager Agent delegates user physiological goals to a specialized Web Researcher Agent and a Certified Fitness Coach Agent.</p>
+        </div>
+        <div class="spec-section">
+          <h4>2. Model Context Protocol (MCP) Tool Server</h4>
+          <ul>
+            <li>Exposes standardized MCP tools (<code>web_search</code> backed by Tavily API and <code>write_blog_markdown</code>) discovered dynamically at runtime by the agent crew.</li>
+            <li>Delivers structured workout routines, macro-nutrient breakdowns, and downloadable Markdown articles in Streamlit.</li>
+          </ul>
+        </div>
+      `
+    },
+    estatesync: {
+      eyebrow: "JAVA 22 & JAVAFX DESKTOP MVC",
+      title: "EstateSync — Real Estate Management Engine",
+      html: `
+        <div class="spec-section">
+          <h4>1. Modular MVC & JDBC Architecture</h4>
+          <p>Engineered with <strong>Java (JDK 22) and JavaFX</strong> using decoupled Controllers, Domain Beans, and JDBC DAOs connected to MySQL with ACID transactions and binary <code>BLOB</code> image storage.</p>
+        </div>
+        <div class="spec-section">
+          <h4>2. Performance & Reporting</h4>
+          <ul>
+            <li>Indexed multi-criteria search and filtering engine reduces property lookup time by <strong>90% across 500+ listings</strong>.</li>
+            <li>Automated financial and portfolio export to Excel (<code>.xlsx</code>) and PDF dossiers using <strong>Apache POI</strong> and <strong>iText</strong>.</li>
+          </ul>
+        </div>
+      `
+    },
+    medicose: {
+      eyebrow: "FULL-STACK MERN & GEMINI AI",
+      title: "Medicose — Healthcare Supply Platform",
+      html: `
+        <div class="spec-section">
+          <h4>Architecture Highlights</h4>
+          <ul>
+            <li><strong>Separated Client/Server Repos:</strong> React + Tailwind CSS frontend paired with a Node.js + Express + MongoDB REST backend.</li>
+            <li><strong>Security & Media:</strong> Stateless JWT authentication, role-based access control (Donor / Recipient / Admin), and Cloudinary image uploads.</li>
+            <li><strong>AI Integration:</strong> Google Gemini-assisted pharmaceutical search supporting an estimated <strong>1,000+ daily users</strong>.</li>
+          </ul>
+        </div>
+      `
+    },
+    mlsuite: {
+      eyebrow: "DEEP LEARNING & STATISTICAL ML",
+      title: "Machine Learning & Deep Learning Benchmark Suite",
+      html: `
+        <div class="spec-section">
+          <h4>5-Domain Architecture Coverage</h4>
+          <ul>
+            <li><strong>Computer Vision:</strong> Convolutional Neural Network (CNN) &amp; Multinomial Logistic Regression trained on <strong>~7,000 images across 150 Pokémon classes</strong>.</li>
+            <li><strong>Natural Language Processing:</strong> LSTM sequence classifier for financial news sentiment analysis.</li>
+            <li><strong>Time-Series Forecasting:</strong> Vanilla RNN sequential forecaster with custom preprocessing pipelines.</li>
+            <li><strong>Tabular Regression &amp; Classification:</strong> SGD, Logistic Regression, and Multi-Layer Perceptrons (MLP).</li>
+          </ul>
+        </div>
+      `
+    },
+    sportize: {
+      eyebrow: "CLOUD-BACKED FULL-STACK PLATFORM",
+      title: "Sportize — Tournament & Event Management",
+      html: `
+        <div class="spec-section">
+          <h4>Architecture Highlights</h4>
+          <ul>
+            <li>Engineered REST APIs with <strong>Node.js &amp; Express.js</strong> backed by managed <strong>Aiven Cloud MySQL</strong> over SSL.</li>
+            <li>Optimized SQL indexing and multi-parameter event filtering to reduce API data retrieval time by <strong>60%</strong>.</li>
+          </ul>
+        </div>
+      `
+    },
+    dsa: {
+      eyebrow: "ALGORITHMIC PROBLEM SOLVING",
+      title: "Data Structures & Algorithms (400+ Solved)",
+      html: `
+        <div class="spec-section">
+          <h4>Repository & Competitive Track</h4>
+          <ul>
+            <li><strong>260+ C++ Solutions Synced on GitHub</strong> with full problem descriptions and complexity analysis.</li>
+            <li><strong>400+ Total Problems Solved</strong> across LeetCode (<code>@raghav_012006</code>), Codeforces (<code>@raghav1233</code>), GeeksforGeeks, and Naukri Code360.</li>
+            <li>Core mastery in Dynamic Programming, Graphs, Trees, Tries, Heaps, Backtracking, and Sliding Window algorithms.</li>
+          </ul>
+        </div>
+      `
     }
+  };
 
-  );
+  function openSpecModal(key) {
+    const data = projectSpecs[key];
+    if (!data) return;
+    document.getElementById("spec-eyebrow").textContent = data.eyebrow;
+    document.getElementById("spec-title").textContent = data.title;
+    document.getElementById("spec-content").innerHTML = data.html;
+    document.getElementById("spec-backdrop").classList.add("open");
+  }
 
+  function closeSpecModal() {
+    document.getElementById("spec-backdrop").classList.remove("open");
+  }
 
-document
-  .querySelectorAll(".reveal")
-  .forEach(element => {
+  /* 8. Command Palette */
+  function openCmdPalette() {
+    const bd = document.getElementById("cmd-backdrop");
+    bd.classList.add("open");
+    const inp = document.getElementById("cmd-input");
+    inp.value = "";
+    filterCmd("");
+    setTimeout(() => inp.focus(), 40);
+  }
 
-    observer.observe(element);
+  function closeCmdPalette() {
+    document.getElementById("cmd-backdrop").classList.remove("open");
+  }
 
+  function filterCmd(q) {
+    const s = q.toLowerCase();
+    document.querySelectorAll("#cmd-list .cmd-row").forEach(r => {
+      r.style.display = r.innerText.toLowerCase().includes(s) ? "flex" : "none";
+    });
+  }
+
+  function runCmdAction(target, external = false) {
+    closeCmdPalette();
+    if (external) window.open(target, "_blank");
+    else document.querySelector(target)?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  document.addEventListener("keydown", e => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      document.getElementById("cmd-backdrop").classList.contains("open") ? closeCmdPalette() : openCmdPalette();
+    } else if (e.key === "Escape") {
+      closeCmdPalette();
+      closeSpecModal();
+    }
   });
 
+  /* 9. Copy Email & Mobile Drawer */
+  function copyEmail() {
+    navigator.clipboard.writeText("graghav1233@gmail.com").then(() => {
+      const t = document.getElementById("toast");
+      t.classList.add("show");
+      setTimeout(() => t.classList.remove("show"), 2600);
+    });
+  }
 
+  function toggleMobileDrawer() {
+    const d = document.getElementById("mobile-drawer");
+    const ic = document.getElementById("mobile-icon");
+    d.classList.toggle("open");
+    ic.className = d.classList.contains("open") ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+  }
 
-/* =========================================================
-   ACTIVE NAVIGATION
-========================================================= */
+  /* 10. Scroll Reveal Observer */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        en.target.classList.add("visible");
+        io.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.08 });
 
-const sections =
-  document.querySelectorAll("section[id]");
-
-const navLinks =
-  document.querySelectorAll(".nav-links a");
-
-
-window.addEventListener("scroll", () => {
-
-  let current = "";
-
-
-  sections.forEach(section => {
-
-    const sectionTop =
-      section.offsetTop - 120;
-
-    if (
-      window.scrollY >= sectionTop
-    ) {
-
-      current =
-        section.getAttribute("id");
-
-    }
-
-  });
-
-
-  navLinks.forEach(link => {
-
-    link.style.color = "";
-
-    if (
-      link.getAttribute("href") ===
-      `#${current}`
-    ) {
-
-      link.style.color =
-        "var(--cyan)";
-
-    }
-
-  });
-
-});
-
-
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 </script>
 
 </body>
