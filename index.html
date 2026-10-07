@@ -1942,9 +1942,14 @@
           Campus Resume
         </a>
 
-        <button type="button" class="btn btn-accent" onclick="copyEmail()">
+        <button type="button" class="btn btn-accent" onclick="copyEmail('graghav1233@gmail.com')" title="Click to copy primary email">
           <i class="fa-regular fa-copy"></i>
           graghav1233@gmail.com
+        </button>
+
+        <button type="button" class="btn btn-secondary" onclick="copyEmail('graghav1232@gmail.com')" title="Click to copy secondary email">
+          <i class="fa-regular fa-envelope"></i>
+          graghav1232@gmail.com
         </button>
       </div>
 
@@ -1991,6 +1996,7 @@
 <span class="syn-kw">export const</span> <span class="syn-fn">RaghavGupta</span> = {
   <span class="syn-prop">education</span>: <span class="syn-str">"B.Tech CSE @ MNNIT Allahabad (2024–2028)"</span>,
   <span class="syn-prop">cpi</span>: <span class="syn-num">7.69</span>,
+  <span class="syn-prop">emails</span>: [<span class="syn-str">"graghav1233@gmail.com"</span>, <span class="syn-str">"graghav1232@gmail.com"</span>],
   <span class="syn-prop">nationalRanks</span>: {
     <span class="syn-prop">jeeMain2024</span>: <span class="syn-str">"99.83 Percentile (Top 0.17% of ~1.4M)"</span>,
     <span class="syn-prop">jeeAdvanced2024</span>: <span class="syn-str">"All India Rank 7406"</span>
@@ -2935,9 +2941,19 @@
           graghav1233@gmail.com
         </a>
 
-        <button type="button" class="btn btn-secondary" onclick="copyEmail()">
+        <a href="mailto:graghav1232@gmail.com" class="btn btn-secondary">
+          <i class="fa-regular fa-envelope"></i>
+          graghav1232@gmail.com
+        </a>
+
+        <button type="button" class="btn btn-secondary" onclick="copyEmail('graghav1233@gmail.com')">
           <i class="fa-regular fa-copy"></i>
-          Copy Email
+          Copy Primary Email
+        </button>
+
+        <button type="button" class="btn btn-secondary" onclick="copyEmail('graghav1232@gmail.com')">
+          <i class="fa-regular fa-copy"></i>
+          Copy Secondary Email
         </button>
 
         <a href="offcampus_resume.pdf" target="_blank" class="btn btn-secondary">
@@ -3023,8 +3039,12 @@
         <div class="cmd-row-left"><i class="fa-solid fa-graduation-cap"></i><span>Open On-Campus MNNIT Allahabad Resume</span></div>
         <span class="kbd-pill">Resume</span>
       </div>
-      <div class="cmd-row" onclick="copyEmail(); closeCmdPalette();">
-        <div class="cmd-row-left"><i class="fa-regular fa-copy"></i><span>Copy Email Address (graghav1233@gmail.com)</span></div>
+      <div class="cmd-row" onclick="copyEmail('graghav1233@gmail.com'); closeCmdPalette();">
+        <div class="cmd-row-left"><i class="fa-regular fa-copy"></i><span>Copy Primary Email (graghav1233@gmail.com)</span></div>
+        <span class="kbd-pill">Action</span>
+      </div>
+      <div class="cmd-row" onclick="copyEmail('graghav1232@gmail.com'); closeCmdPalette();">
+        <div class="cmd-row-left"><i class="fa-regular fa-copy"></i><span>Copy Secondary Email (graghav1232@gmail.com)</span></div>
         <span class="kbd-pill">Action</span>
       </div>
       <div class="cmd-row" onclick="toggleTheme(); closeCmdPalette();">
@@ -3062,7 +3082,8 @@
       <a href="https://linkedin.com/in/raghav-gupta1233" target="_blank">LinkedIn</a>
       <a href="https://leetcode.com/u/raghav_012006/" target="_blank">LeetCode</a>
       <a href="https://codeforces.com/profile/raghav1233" target="_blank">Codeforces</a>
-      <a href="mailto:graghav1233@gmail.com">Email</a>
+      <a href="mailto:graghav1233@gmail.com">graghav1233@gmail.com</a>
+      <a href="mailto:graghav1232@gmail.com">graghav1232@gmail.com</a>
     </div>
   </div>
 </footer>
@@ -3132,7 +3153,7 @@
     trustpay: "<span class='syn-ok'>[TrustPay]</span> 6-Container Banking & Fraud Engine · LightGBM (99.98% acc, 100% precision, 2.35ms) + Groq Llama 3.3 70B + RabbitMQ + Redis 7 + MySQL 8.",
     agents: "<span class='syn-ok'>[GenAI/MCP]</span> AI Fitness Coach (CrewAI Manager/Researcher/Coach + MCP Tool Server) & SQL Learning Assistant (6,764-page ChromaDB RAG + Plotly).",
     ranks: "<span class='syn-num'>JEE Main 2024:</span> 99.83 Percentile (~1.4M candidates) | <span class='syn-num'>JEE Adv 2024:</span> AIR 7406 | <span class='syn-num'>DSA:</span> 400+ Solved.",
-    contact: "Email: <span class='syn-str'>graghav1233@gmail.com</span> | Phone: <span class='syn-str'>+91-9878337737</span> | LinkedIn: <span class='syn-str'>linkedin.com/in/raghav-gupta1233</span>"
+    contact: "Emails: <span class='syn-str'>graghav1233@gmail.com</span>, <span class='syn-str'>graghav1232@gmail.com</span> | Phone: <span class='syn-str'>+91-9878337737</span> | LinkedIn: <span class='syn-str'>linkedin.com/in/raghav-gupta1233</span>"
   };
 
   function runCli(raw) {
@@ -3394,9 +3415,11 @@
   });
 
   /* 9. Copy Email & Mobile Drawer */
-  function copyEmail() {
-    navigator.clipboard.writeText("graghav1233@gmail.com").then(() => {
+  function copyEmail(email = "graghav1233@gmail.com") {
+    navigator.clipboard.writeText(email).then(() => {
       const t = document.getElementById("toast");
+      const txt = document.getElementById("toast-text");
+      if (txt) txt.textContent = `Copied ${email} to clipboard!`;
       t.classList.add("show");
       setTimeout(() => t.classList.remove("show"), 2600);
     });
